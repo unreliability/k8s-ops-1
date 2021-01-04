@@ -42,6 +42,8 @@ autoinstall:
     authorized-keys:
     # MacBook
     - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILF85elFb+GqJ8D2Jrr7VZyknAGbxSLWir4bHrdeCqVk"
+    # Ansible
+    - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJHiKbjWHf/hfmD5ArZek3BnKaLf56L3dBqovisvlABw"
     install-server: true
   late-commands:
   - shutdown -h now
