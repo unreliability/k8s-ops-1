@@ -1,6 +1,0 @@
----
-roles:
-- src: xanmanning.k3s
-  version: v1.18.0
-collections:
-- name: community.general
