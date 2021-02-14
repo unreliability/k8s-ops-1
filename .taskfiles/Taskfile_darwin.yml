@@ -6,8 +6,7 @@ tasks:
   install:
     desc: Install required Homebrew apps
     cmds:
-    - brew install kubernetes-cli helm python3
-    - pip3 install -r requirements.txt
+    - brew install kubernetes-cli helm python3 velero fluxcd/tap/flux kubeseal sops
 
   install:dev:
     desc: Install required Homebrew apps for development
