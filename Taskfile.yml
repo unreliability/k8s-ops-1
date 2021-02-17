@@ -4,6 +4,4 @@ version: '3'
 includes:
   ansible: .taskfiles/Taskfile_ansible.yml
   deps: .taskfiles/Taskfile_{{OS}}.yml
-  renovate: .taskfiles/Taskfile_renovate.yml
-  k3s: .taskfiles/Taskfile_k3s.yml
   secrets: .taskfiles/Taskfile_secrets.yml

@@ -34,3 +34,13 @@ tasks:
     desc: Upgrade all the k8s node's operating system
     cmds:
     - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/ubuntu/prepare.yml
+
+  playbook:k3s:install:
+    desc: Upgrade all the k8s node's operating system
+    cmds:
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/k3s/install.yml
+
+  playbook:k3s:nuke:
+    desc: Upgrade all the k8s node's operating system
+    cmds:
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/k3s/nuke.yml
