@@ -16,3 +16,4 @@ logs/
 ansible/roles/xanmanning.k3s*
 ansible/roles/andrewrothstein.calicoctl*
 kubeconfig
+.envrc
