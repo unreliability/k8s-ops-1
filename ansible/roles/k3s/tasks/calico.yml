@@ -1,5 +1,15 @@
 ---
 
+- name: applying calico
+  command:
+    cmd: kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+    creates: /etc/cni/net.d/10-calico.conflist
+
+- name: applying calico
+  command:
+    cmd: kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+    creates: /etc/cni/net.d/10-calico.conflist
+
 - name: cluster | calico | deploy tigera operator to k3s manifest directory
   become: true
   # run_once: true
