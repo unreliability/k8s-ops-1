@@ -8,11 +8,8 @@ packages:
   - curl
   - dnsutils
   - ebtables
-  - ethtool
-  - git
   - gnupg-agent
   - gnupg2
-  - haveged
   - hdparm
   - htop
   - iperf3
@@ -22,7 +19,6 @@ packages:
   - lvm2
   - neofetch
   - net-tools
-  - netcat
   - nfs-common
   - nano
   - nmap
@@ -30,19 +26,13 @@ packages:
   - open-iscsi
   - pigz
   - psmisc
-  - python3
-  - python3-openssl
-  - python3-pip
-  - rclone
   - rsync
   - scsitools
   - socat
   - software-properties-common
   - traceroute
-  - tree
   - unattended-upgrades
   - unzip
-  - vim
   - open-vm-tools
   apt_remove:
   - apparmor

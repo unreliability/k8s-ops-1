@@ -4,9 +4,9 @@
   tags:
   - host
 
-- include: time.yml
+- include: locale.yml
   tags:
-  - time
+  - locale
 
 - include: packages.yml
   tags:
@@ -43,4 +43,3 @@
 - include: user.yml
   tags:
   - user
-

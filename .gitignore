@@ -3,17 +3,17 @@
 # Trash
 .DS_Store
 Thumbs.db
-bin/
+bin
 flux
 *.iso
 # Temp
-cluster-v2/
-hack/op2vault.sh
 ignore/
 rebuild/
 logs/
+.task/
 # Ansible
 ansible/roles/xanmanning.k3s*
 ansible/roles/andrewrothstein.calicoctl*
-kubeconfig
+node_modules
+mitogen*
 .envrc
