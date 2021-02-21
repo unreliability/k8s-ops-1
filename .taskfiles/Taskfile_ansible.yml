@@ -12,7 +12,7 @@ tasks:
   deps:
     desc: Install Ansible dependencies
     cmds:
-    - ansible-galaxy install -r ./ansible/requirements.yml
+    - ansible-galaxy install -r ./ansible/requirements.yml --force
     - pip3 install -r ./ansible/requirements.txt
 
   ping:
@@ -31,16 +31,16 @@ tasks:
     - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/ubuntu/upgrade.yml
 
   playbook:ubuntu:prepare:
-    desc: Upgrade all the k8s node's operating system
+    desc: Prepare the OS
     cmds:
     - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/ubuntu/prepare.yml
 
   playbook:k3s:install:
-    desc: Upgrade all the k8s node's operating system
+    desc: Install k8s on the OS
     cmds:
     - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/k3s/install.yml
 
   playbook:k3s:nuke:
-    desc: Upgrade all the k8s node's operating system
+    desc: Remove k8s install on the OS
     cmds:
     - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./ansible/playbooks/k3s/nuke.yml

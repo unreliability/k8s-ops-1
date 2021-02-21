@@ -1,6 +1,10 @@
 ---
 version: '3'
 
+vars:
+  PROJECT_ROOT:
+    sh: git rev-parse --show-toplevel
+
 includes:
   ansible: .taskfiles/Taskfile_ansible.yml
   deps: .taskfiles/Taskfile_{{OS}}.yml
