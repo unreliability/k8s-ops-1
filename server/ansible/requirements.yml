@@ -1,0 +1,6 @@
+---
+roles:
+- src: xanmanning.k3s
+collections:
+- name: community.general
+- name: community.sops
