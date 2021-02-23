@@ -3,6 +3,7 @@ kind: DaemonSet
 apiVersion: apps/v1
 metadata:
   name: csi-rbdplugin
+  namespace: ceph
 spec:
   selector:
     matchLabels:
@@ -172,6 +173,7 @@ metadata:
   name: csi-metrics-rbdplugin
   labels:
     app: csi-metrics
+  namespace: ceph
 spec:
   ports:
     - name: http-metrics
