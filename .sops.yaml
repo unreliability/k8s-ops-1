@@ -1,7 +1,0 @@
----
-creation_rules:
-  # - encrypted_regex: '^(data|stringData)$'
-  #   pgp: >-
-  #     EFA353726D3C7EE3039044428ABAFDBBB5ED7D9F
-  - encrypted_regex: '^(data|stringData)$'
-    gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
