@@ -3,12 +3,14 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: rbd-csi-provisioner
+  namespace: ceph
 
 ---
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: rbd-external-provisioner-runner
+  namespace: ceph
 rules:
   - apiGroups: [""]
     resources: ["nodes"]
@@ -60,6 +62,7 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: rbd-csi-provisioner-role
+  namespace: ceph
 subjects:
   - kind: ServiceAccount
     name: rbd-csi-provisioner
