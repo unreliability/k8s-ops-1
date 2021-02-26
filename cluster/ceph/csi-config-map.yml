@@ -1,7 +1,7 @@
 # apiVersion: v1
 # kind: ConfigMap
 # data:
-#     config.json: ENC[AES256_GCM,data:PzqbxxQGUF087J4lJxlhbRF8WmEHxRa1TAAPBGUZxp/YiMeeqijVh092XVootqf296c4nieq9VhCatAHnpPNTHI2LvY8/F7zgezvg4dQ1oCi+OhHJveEA3VhaPySlKEko4O7Ug3naXqgC/jpF6eMR/V+t/tXd86LM8QYHQmYJHQLxAFQWchth4LexUyVFIp3h/sKxc2mjNGOkGuKEdxXXgDUfIX1NZwsARMlj3LP7VdorQCCKrmQD0WjTXE9uFU=,iv:ExHrMQsbmrQVni5KnjfPM/TE5HPmrQbiQxnmFuBqhQs=,tag:gjPix5tsdpUgjfe8NX2XlQ==,type:str]
+#     config.json: ENC[AES256_GCM,data:V6pZSccO/UOTmZK78RxVJV5SxrS4NiUdgrRkiR6FN11yrjEHy7vjHJzUZhmE9lCZJC8mn7RB6DHUWDJvwxikcmTNiaPLgIeSEP5bjKWI5sNP7i1BTvpPF22YDjKMUxp8qyqoRk6FTjnpp6U/46uoo8ke7KpbJtGSY81RYXmFtZE5HRiDBuKvldAlVcHAyOMZk8Y0yxkvwvCEYlmOrcbiLAsLPwUrUxDgo7WhJnMG5I2bfH3zunF+MY50soyiMKs=,iv:ddlZAMeppCCyB90rIQdUGYK60LbLEWNJJfUvyPK5de4=,tag:OGdYjWbJgnpchbwKyKB5zg==,type:str]
 # metadata:
 #     name: ceph-csi-config
 #     namespace: ceph
@@ -10,19 +10,28 @@
 #     gcp_kms: []
 #     azure_kv: []
 #     hc_vault: []
-#     lastmodified: '2021-02-25T21:53:49Z'
-#     mac: ENC[AES256_GCM,data:eHdC8ME98jNmlGMj5HX2NYfsByBVa91gLax61L3slJYtTpmFQyLLoGDpO4Slvur1N3dVrHlQ97V0+dB2zqGbSo3dWMvlCAEHSRjnfwywjTlMprd5QideUa5bGj+FI8+0CkFc26dguiKmtv8uwd8VosyGr5H4glD5SRpeuCqGQDg=,iv:iVPY7dlmsUfZSar2gygK3mCjr/92OUgeiqb9FJE+hVI=,tag:mB0cF6uHH06VfcWzqJ5Q1g==,type:str]
+#     lastmodified: '2021-02-26T18:06:40Z'
+#     mac: ENC[AES256_GCM,data:q31vpcf3Xlgjj4ip5efxiEeuLkNeD7GH6bfmKobC6f9wwnB816ibODTAt61KX0ScE4USILwqELHLBveBpJ4oxvPaHDEJGrzutGeS3ncH2vEzv9Zz4Eobzrzn+P8yiBV5SWINUWb5nZylONexvS4wujNkiH0IYTs0/sNHjGwXSUU=,iv:TWRK+nJUjCzMd2/RTKWvAhsskGp4U6MqtanJpjQ7tUw=,tag:a9Fv61+juHjy2ox+u1wVaQ==,type:str]
 #     pgp:
-#     -   created_at: '2021-02-25T21:53:47Z'
+#     -   created_at: '2021-02-26T18:06:40Z'
 #         enc: |
 #             -----BEGIN PGP MESSAGE-----
 
-#             hF4D7TDQdEBHzYESAQdA4JkDKoLSVihxWLTwZ97NqSYRo+ZJI86t7Nb3aFZJqFUw
-#             9p8dZAH+/mwQiAErSrrWTL3xnwJsrY0FQk/BavgDH2r61YOKw4LegkWZ8qodmKMQ
-#             0l4BfFm+ZR1p+lBl6ma3wK/KDUfuS3ixsA7Z2ZWEOwK6wJh1dSnAKRjPnR/pOOPO
-#             xJ48cECLLEeBpeSjxlEy6u9Ed5PI88oIFyStJfQkFce/H8Ptuymk60GY2vCl2JDK
-#             =w/8O
+#             hQIMAyQ1SH08BnVLAQ//W/5xSTFsRmwK2DXYuePsI21ROgcwj5i9FrVHQ9jd+v/P
+#             ge/NiSh2QQrl8/eUke0wfqvkuO9UBXIQlIUpQkP2sZ4L/2V4FqvFggCs+SsYTgGu
+#             2ipDVEeY+sqUREI+89qjdWyj+SLnZZd4Kvm1ckaMMLQOImZPk1dC+ZjjAZbopD2w
+#             gftBsWVL9cK4qrnXuf2q4OqhbSmwOpFZmERiTiaN/sawT99cWCYJJT71i1EvffSi
+#             A22647eMu6oY4jW6h/jRMVT/bvjA9GcAzI6ZUuYMmpelyYxBwYZCkzgCi/sB0c6q
+#             HIZiEPKdhYgnX6FQbarNTyWNtuBNhwnqVoYunm3s7bVsw3cdNbb5wgkd/tVevZnp
+#             a+1yoEOBHe7kLLomPKZcfGGFzTok1EzKtyS/entLEeEwM6qxg4GA7Zz/xBiOqW2i
+#             wvS/bzTTeAEftU+I0jrcYnOGQ6Ur3e5phkhMb6wQrao6TX25xJvtbHdg5Ql5alaY
+#             3HTglILMzIPJDHLU3eZroBskNZJl5nt++wpRFGzDEIClSgeka9IzfqjctlVZidNR
+#             DHd5kidIz0CkGg2CczuDEaEVWtmS2P6z+f4wCn0fmdnK56hyCxyuUUtQOZXRBjA1
+#             ZUf928++LtZC3TA42CETg1t0dm14SNo0/Hrr4QJwgtsFXf1RLMMZ2RUkqNXxwHXS
+#             XgHFw9ReWde2u9IeyzmCt8LBPqDo6OZxdxhVgWxw7VLohCE0EGzVTFWfPhqBYJlJ
+#             hzPU/Cw+YC4E61yEWwWtnJfdcZh7XKbZWxMsbj5mPA1NrwHBGTOZEMRnKUd+87M=
+#             =o+Dm
 #             -----END PGP MESSAGE-----
-#         fp: EFA353726D3C7EE3039044428ABAFDBBB5ED7D9F
+#         fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
 #     encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
 #     version: 3.6.1
