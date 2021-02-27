@@ -21,6 +21,8 @@ apiVersion: apps/v1
 metadata:
   name: csi-rbdplugin-provisioner
   namespace: ceph
+  annotations:
+    reloader.stakater.com/auto: "true"
 spec:
   replicas: 3
   selector:
