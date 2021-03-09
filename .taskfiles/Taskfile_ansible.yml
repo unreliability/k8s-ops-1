@@ -28,19 +28,33 @@ tasks:
   playbook:ubuntu:upgrade:
     desc: Upgrade all the k8s node's operating system
     cmds:
-    - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./server//ansible/playbooks/ubuntu/upgrade.yml
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} --vault-password-file .vault-password ./server//ansible/playbooks/ubuntu/upgrade.yml 
 
   playbook:ubuntu:prepare:
     desc: Prepare the OS
     cmds:
-    - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./server/ansible/playbooks/ubuntu/prepare.yml
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} --vault-password-file .vault-password ./server/ansible/playbooks/ubuntu/prepare.yml
 
   playbook:k3s:install:
     desc: Install k8s on the OS
     cmds:
-    - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./server/ansible/playbooks/k3s/install.yml
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} --vault-password-file .vault-password ./server/ansible/playbooks/k3s/install.yml
+
+  playbook:k3s:install:flux:
+    desc: Install and load secrets for FluxV2
+    cmds:
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} --vault-password-file .vault-password ./server/ansible/playbooks/k3s/install_flux.yml
 
   playbook:k3s:nuke:
     desc: Remove k8s install on the OS
     cmds:
-    - ansible-playbook -i {{.ANSIBLE_HOSTS}} ./server/ansible/playbooks/k3s/nuke.yml
+    - ansible-playbook -i {{.ANSIBLE_HOSTS}} --vault-password-file .vault-password ./server/ansible/playbooks/k3s/nuke.yml
+  encrypt:
+    desc: Encrypt Ansible Vault
+    cmds:
+    - ansible-vault encrypt --vault-password-file .vault-password ./server/ansible/inventory/k3s-single-control-plane/group_vars/all/vault.yml
+
+  decrypt:
+    desc: Decrypt Ansible Vault
+    cmds:
+    - ansible-vault decrypt --vault-password-file .vault-password ./server/ansible/inventory/k3s-single-control-plane/group_vars/all/vault.yml
