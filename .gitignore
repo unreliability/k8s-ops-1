@@ -4,7 +4,7 @@
 .DS_Store
 Thumbs.db
 bin
-flux
+# flux
 *.iso
 # Temp
 ignore/
@@ -14,7 +14,9 @@ logs/
 server/ansible/kubeconfig
 server/ansible/inventory/e2e/hosts.yml
 server/ansible/roles/xanmanning.k3s*
+server/ansible/roles/geerlingguy.pip*
 server/ansible/roles/andrewrothstein.calicoctl*
 server/tests/node_modules
 .envrc
 kubeconfig
+.vault-password
