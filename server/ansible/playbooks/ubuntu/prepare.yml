@@ -12,6 +12,7 @@
     private: false
   roles:
   - ubuntu
+  - geerlingguy.pip
   tasks:
   - name: reboot
     ignore_errors: true
