@@ -42,8 +42,8 @@ spec:
       existingSecret: velero-aws-secret
     metrics:
       enabled: true
-      serviceMonitor:
-        enabled: true
+      # serviceMonitor:
+      #   enabled: true
     # snapshotsEnabled: true
     snapshotsEnabled: false
     deployRestic: true
