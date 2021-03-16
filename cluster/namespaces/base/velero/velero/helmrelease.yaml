@@ -20,7 +20,7 @@ spec:
     configuration:
       provider: aws
       backupStorageLocation:
-        name: velero-aws
+        # name: velero-aws
         bucket: velero-s3-dc2
         prefix: staging
         config:
