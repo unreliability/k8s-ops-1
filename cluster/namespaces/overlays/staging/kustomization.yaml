@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   # - ../../base/actions-runner-system
   - ../../base/flux-system
+  - ../../base/storage/ceph
