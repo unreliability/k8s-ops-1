@@ -4,3 +4,5 @@ resources:
   # - ../../base/actions-runner-system
   - ../../base/flux-system
   - ../../base/storage/ceph
+  - ../../base/velero
+  - ../../base/velero/velero
