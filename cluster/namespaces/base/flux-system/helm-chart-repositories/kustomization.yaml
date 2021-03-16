@@ -6,3 +6,4 @@ resources:
   - kubernetes-stable-charts.yaml
   - jetstack-charts.yaml
   - kubernetes-sigs-charts.yaml
+  - vmware-charts.yaml
