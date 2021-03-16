@@ -4,3 +4,9 @@ resources:
   - namespace.yaml
   - csi-config-map.enc.yaml
   - csi-rbd-secret.enc.yaml
+  - kms-config.yaml
+  - csi-provisioner-rbac.yaml
+  - csi-nodeplugin-rbac.yaml
+  - csi-rbdplugin-provisioner.yaml
+  - csi-rbdplugin.yaml
+  - csi-rbd-sc.yaml
