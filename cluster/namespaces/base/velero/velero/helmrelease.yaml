@@ -18,7 +18,7 @@ spec:
       interval: 5m
   values:
     annotations:
-      secret.reloader.stakater.com/reload: velero-aws-secret
+      reloader.stakater.com/auto: "true"
     configuration:
       provider: aws
       backupStorageLocation:
