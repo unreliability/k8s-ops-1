@@ -6,3 +6,4 @@ resources:
   - ../../base/storage/ceph
   - ../../base/velero
   - ../../base/velero/velero
+  - ../../cert-manager/
