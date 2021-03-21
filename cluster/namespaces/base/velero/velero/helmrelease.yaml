@@ -32,6 +32,7 @@ spec:
         config:
           region: us-east-2
       resticTimeout: 6h
+      default-volumes-to-restic: true
     initContainers:
     - name: velero-plugin-for-aws
       image: velero/velero-plugin-for-aws:v1.1.0
@@ -56,4 +57,4 @@ spec:
       bi-daily-backup:
         schedule: "0 6,18 * * *"
         template:
-          ttl: "120h"
+          ttl: "168h"
