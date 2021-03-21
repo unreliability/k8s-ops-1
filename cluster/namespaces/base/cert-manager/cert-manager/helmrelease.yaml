@@ -1,4 +1,3 @@
-
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
@@ -50,7 +49,6 @@ spec:
       servicemonitor:
         enabled: false
     extraArgs:
-      - --cluster-resource-namespace=cert-manager
       - --enable-certificate-owner-ref=true
       - --dns01-recursive-nameservers=1.1.1.1:53,8.8.8.8:53
       - --dns01-recursive-nameservers-only
