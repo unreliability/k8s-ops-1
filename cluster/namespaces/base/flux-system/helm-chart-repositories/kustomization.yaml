@@ -7,3 +7,4 @@ resources:
   - jetstack-charts.yaml
   - kubernetes-sigs-charts.yaml
   - vmware-charts.yaml
+  - ingress-nginx-charts.yaml
