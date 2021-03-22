@@ -40,9 +40,9 @@ spec:
         enabled: true
         serviceMonitor:
           enabled: true
-          namespace: kube-system
+          namespace: ingress-nginx-internal
       extraArgs:
-        default-ssl-certificate: "kube-system/theredone-dev-tls"
+        default-ssl-certificate: "ingress-nginx-internal/theredone-dev-tls"
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
