@@ -5,11 +5,13 @@ on:
   push:
     paths:
       - 'docs'
+      - '.github/workflows/docs.yml'
+      - '.github/mkdocs/**'
     branches:
       - main
   workflow_dispatch:
     paths:
-      - '.github/workflows/mkdocs.yml'
+      - '.github/workflows/docs.yml'
       - '.github/mkdocs/**'
       - 'docs/**'
 
