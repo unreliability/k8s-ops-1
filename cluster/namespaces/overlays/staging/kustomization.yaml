@@ -7,3 +7,4 @@ resources:
   - ../../base/velero
   - ../../base/cert-manager
   - ../../base/ingress-nginx-internal
+  - ../../kube-system
