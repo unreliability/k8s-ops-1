@@ -14,9 +14,9 @@ edit_uri: 'edit/main/docs/'
 theme:
   name: material
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo
-  # logo: https://raspbernetes.github.io/img/logo.svg
+  logo: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
-  # favicon: https://raspbernetes.github.io/img/logo.svg
+  favicon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language
   language: en
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette
