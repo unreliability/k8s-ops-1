@@ -22,7 +22,7 @@ theme:
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette
   palette:
     scheme: preference
-    primary: light blue
+    primary: deep purple
     accent: indigo
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
   icon:
