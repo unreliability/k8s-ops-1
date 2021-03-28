@@ -9,7 +9,7 @@ on:
       - main
   workflow_dispatch:
     paths:
-      - '.github/workflows/mkdocs.yaml'
+      - '.github/workflows/mkdocs.yml'
       - '.github/mkdocs/**'
       - 'docs/**'
 

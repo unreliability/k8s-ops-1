@@ -1,7 +1,7 @@
 # Project information
 site_name: claughinghouse | k8s-ops
 site_description: This repo is a declarative implementation of a Kubernetes cluster using GitOps.
-site_author: Claughinghouse
+site_author: claughinghouse
 site_url: https://claughinghouse.github.io/k8s-ops/
 
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-name
