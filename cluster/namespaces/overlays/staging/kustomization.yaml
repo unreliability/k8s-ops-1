@@ -8,3 +8,5 @@ resources:
   - ../../base/ingress-nginx-internal
   - ../../base/ingress-nginx-external
   - ../../base/kube-system
+patchesStrategicMerge:
+  - patch.certificates.yaml

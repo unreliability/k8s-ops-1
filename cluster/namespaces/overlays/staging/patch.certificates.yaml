@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-staging
+  namespace: cert-manager
+spec:
+  secretName: letsencrypt-staging-le
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: "stg.theredone.dev"
+  dnsNames:
+    - stg.theredone.dev
+    - '*.stg.theredone.dev'
