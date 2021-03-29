@@ -42,7 +42,7 @@ spec:
         #   enabled: true
         #   namespace: ingress-nginx-internal
       extraArgs:
-        default-ssl-certificate: "ingress-nginx-internal/theredone-dev-tls"
+        default-ssl-certificate: "cert-manager/theredone-dev-tls"
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
