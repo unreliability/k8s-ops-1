@@ -45,7 +45,7 @@ spec:
       metrics:
         enabled: true
       extraArgs:
-        default-ssl-certificate: "cert-manager/prod-theredone-dev"
+        default-ssl-certificate: "cert-manager/prod-theredone-dev-tls"
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
