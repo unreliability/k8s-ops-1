@@ -4,6 +4,3 @@ kind: Kustomization
 resources:
   - helmrelease.yaml
   - velero-secret.enc.yaml
-  # - networkpolicy.yaml
-  # - secret.encrypted.yaml
-  # - servicemonitor.yaml
