@@ -45,7 +45,7 @@ spec:
       metrics:
         enabled: true
       extraArgs:
-        default-ssl-certificate: "ingress-nginx-internal/prod-theredone-dev-tls"
+        default-ssl-certificate: "cert-manager/prod-theredone-dev"
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
