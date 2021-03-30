@@ -11,7 +11,7 @@ metadata:
 spec:
   secretName: prod-theredone-dev-tls
   issuerRef:
-    name: letsencrypt-staging
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: "theredone.dev"
   dnsNames:
@@ -31,7 +31,7 @@ metadata:
 spec:
   secretName: stg-theredone-dev-tls
   issuerRef:
-    name: letsencrypt-staging
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: "stg.theredone.dev"
   dnsNames:
