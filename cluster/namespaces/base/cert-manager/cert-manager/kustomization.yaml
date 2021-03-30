@@ -6,3 +6,5 @@ resources:
   - secret.enc.yaml
   - clusterissuer-prod.yaml
   - clusterissuer-stg.yaml
+  - staging-cert.yaml
+  - production-cert.yaml
