@@ -91,3 +91,6 @@ markdown_extensions:
 
 nav:
   - Introduction: index.md
+  - Core Concepts: core-concepts/index.md
+  - Get Started:
+    - Ansible: get-started/ansible.md
