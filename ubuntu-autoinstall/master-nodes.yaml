@@ -1,4 +1,5 @@
-#cloud-config
+---
+# cloud-config
 autoinstall:
   version: 1
   refresh-installer:
@@ -31,7 +32,7 @@ autoinstall:
         dhcp4-overrides:
           use-dns: false
         nameservers:
-          addresses: 
+          addresses:
           - 10.1.6.1
       id1:
         match:

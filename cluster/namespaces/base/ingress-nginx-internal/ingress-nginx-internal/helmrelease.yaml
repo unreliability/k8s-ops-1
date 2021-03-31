@@ -57,11 +57,5 @@ spec:
                 values:
                 - controller
             topologyKey: "kubernetes.io/hostname"
-      # resources:
-      #   requests:
-      #     memory: 250Mi
-      #     cpu: 100m
-      #   limits:
-      #     memory: 1000Mi
     defaultBackend:
       enabled: false
