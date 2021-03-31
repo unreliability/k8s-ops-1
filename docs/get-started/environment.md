@@ -4,16 +4,10 @@ In order to get started we need a few packages installed and setup. This guide a
 
 Using [HomeBrew][brew] on MacOS install the following packages:
 
-## [Task][task]
-
-```bash
-brew install go-task/tap/go-task
-```
-
-## [Fluxv2][flux]
+## [Ansible][ansible]
 
 ``` bash
-brew install fluxcd/tap/flux
+brew install ansible
 ```
 
 ## [Direnv][direnv]
@@ -22,64 +16,75 @@ brew install fluxcd/tap/flux
 brew install direnv
 ```
 
-## [Ansible][ansible]
-
-``` bash
-brew install ansible
-```
-
 ## [Docker][docker]
 
 ``` bash
 brew install --cask docker
 ```
 
-## Helm
+## [Fluxv2][flux]
 
 ``` bash
-
+brew install fluxcd/tap/flux
 ```
 
-## jq
-
+## [Go][go]
 ``` bash
-
+brew install go
 ```
 
-## Kubectl
+## [Helm][helm]
 
 ``` bash
-
+brew install helm
 ```
 
-## Pre-commit
+## [jq][jq]
 
 ``` bash
-
+brew install jq
 ```
 
-## Shellcheck
+## [Kubectl][kubectl]
 
 ``` bash
-
+brew install kubectl
 ```
 
-## Mozilla SOPs
+## [Mozilla SOPs][mozilla-sops]
 
 ``` bash
-
+brew install sops
 ```
 
-## Velero
+## [Pre-commit][pre-commit]
 
 ``` bash
-
+brew install pre-commit
 ```
 
-## Yamllint
+## [Shellcheck][shellcheck]
 
 ``` bash
+brew install shellcheck
+```
 
+## [Task][task]
+
+```bash
+brew install go-task/tap/go-task
+```
+
+## [Velero][velero]
+
+``` bash
+brew install velero
+```
+
+## [Yamllint][yamllint]
+
+``` bash
+brew install yamllint
 ```
 
 
@@ -88,12 +93,13 @@ brew install --cask docker
 [direnv]: https://direnv.net/
 [docker]: https://www.docker.com/
 [flux]: https://toolkit.fluxcd.io/get-started/
-[helm]:
-[jq]:
-[kubectl]:
-[mozilla-sops]:
-[pre-commit]:
-[shellcheck]:
+[go]: https://golang.org/
+[helm]: https://helm.sh/
+[jq]: https://stedolan.github.io/jq/
+[kubectl]: https://kubernetes.io/
+[mozilla-sops]: https://github.com/mozilla/sops
+[pre-commit]: https://pre-commit.com/
+[shellcheck]: https://www.shellcheck.net/
 [task]: https://taskfile.dev/
-[velero]:
-[yamllint]:
+[velero]: https://velero.io/
+[yamllint]: https://github.com/adrienverge/yamllint
