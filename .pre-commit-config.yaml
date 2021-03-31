@@ -1,37 +1,44 @@
----
 fail_fast: false
 repos:
-- repo: https://github.com/adrienverge/yamllint.git
-  rev: v1.25.0
-  hooks:
-  - id: yamllint
-    args:
+- hooks:
+  - args:
     - -c
-    - ".github/yamllint.config.yaml"
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.4.0
-  hooks:
+    - .github/yamllint.config.yaml
+    id: yamllint
+  repo: https://github.com/adrienverge/yamllint.git
+  rev: v1.25.0
+- hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
   - id: fix-byte-order-marker
   - id: mixed-line-ending
-  - id: check-added-large-files
-    args: [--maxkb=2048]
+  - args:
+    - --maxkb=2048
+    id: check-added-large-files
   - id: check-merge-conflict
   - id: check-executables-have-shebangs
-- repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.9
-  hooks:
+  repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+- hooks:
   - id: remove-crlf
   - id: remove-tabs
-- repo: https://github.com/jumanjihouse/pre-commit-hooks
-  rev: 2.1.5
-  hooks:
-  - id: shellcheck
+  repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.1.9
+- hooks:
+  - additional_dependencies: []
+    args:
+    - --severity=error
+    id: shellcheck
     language: script
-    args: [--severity=error]
-    additional_dependencies: []
-- repo: https://github.com/sirosen/fix-smartquotes
-  rev: 0.2.0
-  hooks:
+  repo: https://github.com/jumanjihouse/pre-commit-hooks
+  rev: 2.1.5
+- hooks:
   - id: fix-smartquotes
+  repo: https://github.com/sirosen/fix-smartquotes
+  rev: 0.2.0
+- hooks:
+  - id: commitizen
+    stages:
+    - commit-msg
+  repo: https://github.com/commitizen-tools/commitizen
+  rev: v2.16.0
