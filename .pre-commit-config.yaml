@@ -36,9 +36,3 @@ repos:
   - id: fix-smartquotes
   repo: https://github.com/sirosen/fix-smartquotes
   rev: 0.2.0
-- hooks:
-  - id: commitizen
-    stages:
-    - commit-msg
-  repo: https://github.com/commitizen-tools/commitizen
-  rev: v2.16.0
