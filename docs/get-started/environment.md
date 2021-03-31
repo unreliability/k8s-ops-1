@@ -10,6 +10,11 @@ Using [HomeBrew][brew] on MacOS install the following packages:
 brew install ansible
 ```
 
+## [Commitizen][commitizen]
+``` bash
+brew install commitizen
+```
+
 ## [Direnv][direnv]
 
 ``` bash
@@ -26,6 +31,11 @@ brew install --cask docker
 
 ``` bash
 brew install fluxcd/tap/flux
+```
+
+## [Git][git]
+``` bash
+brew install git
 ```
 
 ## [Go][go]
@@ -90,9 +100,11 @@ brew install yamllint
 
 [ansible]: https://www.ansible.com/
 [brew]: https://brew.sh/
+[commitizen]: https://github.com/commitizen-tools/commitizen
 [direnv]: https://direnv.net/
 [docker]: https://www.docker.com/
 [flux]: https://toolkit.fluxcd.io/get-started/
+[git]:  https://git-scm.com/
 [go]: https://golang.org/
 [helm]: https://helm.sh/
 [jq]: https://stedolan.github.io/jq/
