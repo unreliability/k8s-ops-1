@@ -9,5 +9,6 @@ resources:
   - ../base/ingress-nginx-internal
   - ../base/ingress-nginx-external
   - ../base/kube-system
+  - ../base/monitoring
 # patchesStrategicMerge:
 #   - patch.certificates.yaml

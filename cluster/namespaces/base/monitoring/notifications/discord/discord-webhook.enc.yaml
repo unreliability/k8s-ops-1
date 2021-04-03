@@ -1,0 +1,39 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: discord-webhook-url
+  namespace: monitoring
+data:
+  address: ENC[AES256_GCM,data:YSyijcHxTcmBp3zmLlejWCCvjON+XFQ0Fx7ZBgFU5yPS3C8dB+XkU0VrxjKtzWrmZ42jnhxiBvEz8ygZQRKQH9xWi9M5TZrC6EgtIaw4Ku3KsIPFApxuagdhg61Cdgo0H1F7iTYUosroYDUQ2DUR50EPg9ze5ptdf8z81ELoCEpQOQOD3ony9lbaGFz7Yc6vISez2ovP8mAUeZm0G+gtWQ==,iv:PkCThQABkSG+6aVEFR1+qzY/a1ReZg751cpTzrUyx78=,tag:k0/rdtGqQHgn7ht1OuWLVw==,type:str]
+type: Opaque
+sops:
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age: []
+  lastmodified: "2021-04-03T02:33:31Z"
+  mac: ENC[AES256_GCM,data:GYPxm5kDsPl+jJYk5b8tEY4AZ4jauVeKBTNi2TqtO6wJltVyMpS0mJQVlbSPKUWiDXaPxiZ826ijK35juyK0lD7sajkeqb048D1zgsAmk0eIN5WagGyhnVB5+kHkQ8euGeFkSwsvjPkyuNGLR79gWVoDgt1ocqlOdjMCAGo88nM=,iv:/xYl1xQS/64wXNtQlPxkUCP5PDhBGDHralKa8d+MYqc=,tag:KLNzUgCs0g6V/E6DyXDHhA==,type:str]
+  pgp:
+    - created_at: "2021-04-03T02:33:30Z"
+      enc: |
+        -----BEGIN PGP MESSAGE-----
+
+        hQIMAyQ1SH08BnVLAQ/+LS9GK0MHm/xWCtJvk6hajTTQ7JEr4KqF+5B20Eamc7Gp
+        JsqbzM08I9sFSCOaYmsyvvsCZdPpSFWvJb+aIzyEGYlVJWw/OGatGD3VIOCaEdSL
+        6WNGh+R0qyn0f6NSUvbxvjSl2ntYaaTyo9jrqNmReKbbjuRQvV8nwVknTvRU+lHD
+        0SRo9FAdjhjRFO7eHTFJk2mxn3a52+x4JrTTiM1zZFFLtip+3V6f6skAGVvBMfVr
+        7ZLUlBeeg5Hn2Ec4pAApRpRcIlwWFotQkDCUEI0GhlqOV9TTErtTR0f076KrCkyz
+        iF/fPTh962/XYPChKX8qrN46IfIcUgnPVHv4tsIjCVET5MYZ7aEKxHab0FXE5rvP
+        8HT/8ukclciQ4ftCBp/5WU4dR+BX7QlfcrnnwEbgHU7YWVin9kTlnvBR13W9gtqi
+        A4EgK4ZW1dkzshWY6Km2OC/u1tG1PL7lHX3AnyUSg7AfWFTk5tsPDmFHAAuU8UrT
+        jVfbALkD39UBUWKP9xJDs9/Mve2kESkxr3223OfWGgs9pX4EyYdK2FS6qwSlY33J
+        qQAtrE2WYEVNHt1Rl9muXIPtgoAMzPOgBeoQUQdHwpiozqkUr1CMWAw2zyHxmQdk
+        VRrTLq796/9ww7m4XCKSMV/JA4vQY3PCMvhW1L/M2xq/z0xp/jIQJQMPdjWhe9LS
+        XAHK0QjGxKq3A3Ma3pocm4YeDzNlHCN59BYRKtZqCG1dPVm700jTO7qeoYxlSs5I
+        FQQiv1WJNtMqYZx/z6Exmx8AcvvW0Gg6F4CeefvCXGKoKK8iTVrpzT+IxtrO
+        =SoWy
+        -----END PGP MESSAGE-----
+      fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
+  version: 3.7.0
