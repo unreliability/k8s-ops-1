@@ -24,7 +24,7 @@ spec:
       backupStorageLocation:
         # name: velero-aws
         bucket: velero-s3-dc2
-        prefix: staging
+        prefix: k8s
         config:
           region: us-east-2
       volumeSnapshotLocation:
