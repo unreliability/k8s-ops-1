@@ -35,9 +35,9 @@ jobs:
         delete-branch: true
         title: "chore(deps): upgrade flux components to ${{ steps.upgrade.outputs.flux_version }}"
         signoff: true
-        committer: "Devin Buhl <onedr0p@users.noreply.github.com>"
-        author: "Devin Buhl <onedr0p@users.noreply.github.com>"
-        assignees: "onedr0p"
+        committer: "claughinghouse <claughinghouse@users.noreply.github.com>"
+        author: "claughinghouse <claughinghouse@users.noreply.github.com>"
+        assignees: "claughinghouse"
         commit-message: "chore(deps): upgrade flux components to ${{ steps.upgrade.outputs.flux_version }}"
         body: |
           Release notes: https://github.com/fluxcd/flux2/releases/tag/${{ steps.upgrade.outputs.flux_version }}
