@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 data:
   token: ENC[AES256_GCM,data:TiY+FK+RDkUu/cmPYHo64A69t/kGZR6eU36neojXPQV3L0qCWzuoZ+4uBfcud8HStZOlgqz38Ho=,iv:DBDnxpt/ZU0z+fO4l5xtyL8QJSPMrR5tAzbDFC2U/IY=,tag:V0l972X8aL8LwHWvAhYTag==,type:str]
-typs: Opaque
+type: Opaque
 sops:
   kms: []
   gcp_kms: []
