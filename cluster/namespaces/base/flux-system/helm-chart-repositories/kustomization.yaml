@@ -9,3 +9,5 @@ resources:
   - kubernetes-sigs-charts.yaml
   - vmware-charts.yaml
   - ingress-nginx-charts.yaml
+  - prometheus-community-charts.yaml
+  - infracloudio-charts.yaml
