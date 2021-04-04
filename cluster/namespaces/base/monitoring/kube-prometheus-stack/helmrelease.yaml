@@ -46,7 +46,7 @@ spec:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: internal
-          cert-manager.io/cluster-issuer: letsencrypt-production
+          cert-manager.io/cluster-issuer: letsencrypt-prod
         hosts:
         - alertmanager.theredone.dev
         tls:
@@ -74,7 +74,7 @@ spec:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: internal
-          cert-manager.io/cluster-issuer: letsencrypt-production
+          cert-manager.io/cluster-issuer: letsencrypt-prod
         hosts:
         - prometheus.theredone.dev
         tls:
