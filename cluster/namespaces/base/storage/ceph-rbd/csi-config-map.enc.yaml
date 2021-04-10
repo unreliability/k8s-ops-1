@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: ConfigMap
+data:
+  config.json: ENC[AES256_GCM,data:SqjuswPD5ufcThqGvAtvF2ItR8gny8DpwPCO5f6Lyuw9qhNLPdiwjab+HNgADrQrXjbrvoMio9KSG0vcZiImPmMg9gqJQlm40/0cJCsD7fvjcEo42QTLhxprXYAtDQcmhkNx4kp/OzHfagTUJM+G7h/uWqmAzmp32ecN+nkC2nvQobCWqhUdXLUekzKdR/KGPUYC/xTOJvatXAfGlA/HN6j5oYPsvxzE5833FpCMzffkPF3ny+L1BlRITSJYmJw=,iv:yn4KRVsqnaOUtEQtcbS2aMSPkzubL8cMX9czoVAqjk8=,tag:KxsMTM0nTJ0+pgVRP1Tfjw==,type:str]
+metadata:
+  name: ceph-csi-config
+  namespace: ceph-rbd
+sops:
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age: []
+  lastmodified: "2021-04-10T01:52:44Z"
+  mac: ENC[AES256_GCM,data:1I0rTPQpldBNmpO+Fz7j9e0hu1ROiJr2oCUajLi0xUNS8zJerVubjCADEWCEv0joRNL9f6JHg1F8JGM67KDSHa3sQ3uDr1MVUQeSlhXPu9UoflOQPzx0cTItOglNviTpeacI7u256s432xVBeBDfTsfLR73nFyHiEE+rTZ+7a6A=,iv:8rKX1uNx4fhkm9zWrtA0nC0scfjV7HrVjcbbNlPPs6I=,tag:9ofiAU12+XjAdRxS17pqIQ==,type:str]
+  pgp:
+    - created_at: "2021-04-10T01:52:43Z"
+      enc: |
+        -----BEGIN PGP MESSAGE-----
+
+        hQIMAyQ1SH08BnVLAQ//a2wP8lRAJTWkGP41C26S4KqvbfdNTS4w22TVQH9RU8tW
+        x/2r97eXgcOQLID2q/1hdHvB9XSMX8iBt1329sZ1TUFMy9dhsnADtEWfjCE0b8RK
+        +ZEZJkIjr22sdiMuDyzETEUObeD0TldNM0mAxy2C0QSdq0zLiwKhqmHjReHWqyLo
+        pZ/jvOAee/g9XAN0Cg+NZM0tfTyh8ZIP9zc+Gxk8D7cKUeSSpJMG7djDVF5//6en
+        I7K+Ae1LYAOvbwy1ezV8kzRK79V3eEWNGZwkQ/BHjKN3PgkBoXwk9atvFOQU5KOR
+        3iyXEkBRlEXiw6g2d5fFYAQirb3KDlyCq/be8cDSo825uKL/ItQRzmpEMsQ4/f36
+        n0R00dwTEClIELa/eeaGaLUwoop/+UGYr6c/y7fX8lZ8QAwPgxAF/wBI2ttBIh3T
+        4wIKNtWL5wmv1Nczizrxd/NeorPXgnel52Jd69IONYqavwOUPj9mIFn22l7xe+29
+        IRf4Psxvx+tfc1ut5Jtq0lXT2miLEMWYp9GfbIZbJKRcAdzslM2MSTouzACmPpoZ
+        CParQz7Dnps53gQGEplR3lXg2bSPIsBjngeOrmmAACYYtYcsUpcse+1JgZxRwXvC
+        iayxfVg7AQNhp6yPj123kog9L8nBCKwhvzuQ1b+0/VtmLQHAIewJDgIV/GpykxrS
+        XgHkvwn3dHCdbIAVTopckmYXfbn3+5kvHUMv7W4pwTgVAeXYAk0NDAKxov9fQCtK
+        w3AnY/e+xD1gp9PqKfqhvIR3o+NRH2H0DUtdiApSd12dwrCiT/+4Xjig2AHMD9A=
+        =Il2w
+        -----END PGP MESSAGE-----
+      fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
+  version: 3.7.1
