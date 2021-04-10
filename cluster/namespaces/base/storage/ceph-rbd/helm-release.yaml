@@ -16,10 +16,10 @@ spec:
         name: ceph-csi
         namespace: flux-system
       interval: 10m
-  valuesFrom:
-    - configMapKeyRef:
-        name: ceph-csi-config
-        namespace: ceph-rbd
+  # valuesFrom:
+  #   - configMapKeyRef:
+  #       name: ceph-csi-config
+  #       namespace: ceph-rbd
   values:
     rbac:
       create: true
