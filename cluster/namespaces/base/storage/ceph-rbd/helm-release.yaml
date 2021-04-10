@@ -16,6 +16,10 @@ spec:
         name: ceph-csi
         namespace: flux-system
       interval: 10m
+  valuesFrom:
+    - configMapKeyRef:
+        name: ceph-csi-config
+        namespace: ceph-rbd
   values:
     rbac:
       create: true
@@ -24,10 +28,6 @@ spec:
         create: true
       provisioner:
         create: true
-    valuesFrom:
-      - configMapKeyRef:
-          name: ceph-csi-config
-          namespace: ceph-rbd
     encryptionKMSConfig:
       {
         "vault-tokens-test":
