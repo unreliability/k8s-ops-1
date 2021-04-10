@@ -99,4 +99,6 @@ spec:
           repository: k8s.gcr.io/sig-storage/csi-snapshotter
           tag: v4.0.0
           pullPolicy: IfNotPresent
-    configMapName: ceph-csi-config
+    # configMapName: ceph-csi-config
+    configMapKey: ceph-csi-config
+    externallyManagedConfigmap: false
