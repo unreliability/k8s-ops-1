@@ -63,3 +63,39 @@ spec:
         repository: quay.io/cephcsi/cephcsi
         tag: v3.2.1
         pullPolicy: IfNotPresent
+    provisioner:
+      name: provisioner
+      replicaCount: 3
+      deployController: true
+      timeout: 60s
+    httpMetrics:
+      enabled: true
+      containerPort: 8080
+      service:
+        enabled: true
+        servicePort: 8080
+        type: ClusterIP
+      provisioner:
+        image:
+          repository: k8s.gcr.io/sig-storage/csi-provisioner
+          tag: v2.0.4
+          pullPolicy: IfNotPresent
+      attacher:
+        name: attacher
+        enabled: true
+        image:
+          repository: k8s.gcr.io/sig-storage/csi-attacher
+          tag: v3.0.2
+          pullPolicy: IfNotPresent
+      resizer:
+        name: resizer
+        enabled: true
+        image:
+          repository: k8s.gcr.io/sig-storage/csi-resizer
+          tag: v1.0.1
+          pullPolicy: IfNotPresent
+      snapshotter:
+        image:
+          repository: k8s.gcr.io/sig-storage/csi-snapshotter
+          tag: v3.0.2
+          pullPolicy: IfNotPresent
