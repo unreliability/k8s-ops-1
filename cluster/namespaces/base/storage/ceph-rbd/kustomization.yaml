@@ -4,4 +4,6 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - csi-config-map.enc.yaml
+  - csi-rbd-secret.enc.yaml
   - helm-release.yaml
+  - csi-rbd-sc.yaml
