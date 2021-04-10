@@ -28,20 +28,20 @@ spec:
       - configMapKeyRef:
           name: ceph-csi-config
           namespace: ceph-rbd
-        encryptionKMSConfig:
+    encryptionKMSConfig:
+      {
+        "vault-tokens-test":
           {
-            "vault-tokens-test":
-              {
-                "encryptionKMSType": "",
-                "vaultAddress": "",
-                "vaultBackendPath": "",
-                "vaultTLSServerName": "",
-                "vaultCAVerify": "",
-                "tenantConfigName": "",
-                "tenantTokenName": "",
-                "tenants": {},
-              },
-          }
+            "encryptionKMSType": "",
+            "vaultAddress": "",
+            "vaultBackendPath": "",
+            "vaultTLSServerName": "",
+            "vaultCAVerify": "",
+            "tenantConfigName": "",
+            "tenantTokenName": "",
+            "tenants": {},
+          },
+      }
     logLevel: 0
     nodeplugin:
       name: nodeplugin
