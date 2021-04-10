@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - csi-config-map.enc.yaml
-  - helm-releasae.yaml
+  - helm-release.yaml
