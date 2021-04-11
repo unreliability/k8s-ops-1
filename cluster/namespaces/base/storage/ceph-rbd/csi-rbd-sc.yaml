@@ -13,7 +13,7 @@ parameters:
   csi.storage.k8s.io/node-stage-secret-name: ceph-rbd-secret
   csi.storage.k8s.io/node-stage-secret-namespace: ceph-rbd
   csi.storage.k8s.io/controller-expand-secret-name: ceph-rbd-secret
-  csi.storage.k8s.io/controller-expand-secret-namespace: rbd
+  csi.storage.k8s.io/controller-expand-secret-namespace: ceph-rbd
 reclaimPolicy: Delete
 allowVolumeExpansion: true
 mountOptions:
