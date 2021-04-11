@@ -9,7 +9,7 @@ sed -i 's|iso/|./|g' iso/md5sum.txt
 sed -i 's|---|autoinstall ds=nocloud\\\;s=/cdrom/nocloud/ ---|g' iso/boot/grub/grub.cfg
 sed -i 's|---|autoinstall ds=nocloud;s=/cdrom/nocloud/ ---|g' iso/isolinux/txt.cfg
 
-cp autoinstall-masters.yml iso/nocloud/user-data
+cp autoinstall-masters.yaml iso/nocloud/user-data
 
 xorriso -as mkisofs -r \
     -V Ubuntu\ masters\ amd64 \
@@ -21,7 +21,7 @@ xorriso -as mkisofs -r \
     -isohybrid-mbr /usr/lib/ISOLINUX/isohdpfx.bin  \
     iso/boot iso
 
-cp autoinstall-workers.yml iso/nocloud/user-data
+cp autoinstall-workers.yaml iso/nocloud/user-data
 
 xorriso -as mkisofs -r \
     -V Ubuntu\ workers\ amd64 \

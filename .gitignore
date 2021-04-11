@@ -12,7 +12,7 @@ logs/
 .task/
 # Server folder
 server/ansible/kubeconfig
-server/ansible/inventory/e2e/hosts.yml
+server/ansible/inventory/e2e/hosts.yaml
 server/ansible/roles/xanmanning.k3s*
 server/ansible/roles/geerlingguy.pip*
 server/ansible/roles/andrewrothstein.calicoctl*

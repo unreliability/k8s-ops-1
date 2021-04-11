@@ -1,1 +1,1 @@
-[![docs](https://github.com/claughinghouse/k8s-ops/actions/workflows/docs.yml/badge.svg)](https://github.com/claughinghouse/k8s-ops/actions/workflows/docs.yml)
+[![docs](https://github.com/claughinghouse/k8s-ops/actions/workflows/docs.yaml/badge.svg)](https://github.com/claughinghouse/k8s-ops/actions/workflows/docs.yaml)

@@ -3,14 +3,14 @@ exclude_paths:
   - .github/
   - .sops.yaml
   - .taskfiles/
-  - ansible/requirements.yml
-  - ansible/inventory/cluster/hosts.yml
+  - ansible/requirements.yaml
+  - ansible/inventory/cluster/hosts.yaml
   - ansible/roles/andrewrothstein.calicoctl/
   - ansible/roles/xanmanning.k3s/
   - cluster/
   - integrations/
-  - requirements.yml
-  - Taskfile.yml
+  - requirements.yaml
+  - Taskfile.yaml
 skip_list:
   - '306'
   - '305'

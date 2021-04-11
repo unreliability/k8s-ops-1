@@ -1,0 +1,30 @@
+---
+name: docs
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - ".github/workflows/docs.yaml"
+      - ".github/mkdocs/**"
+    branches:
+      - main
+  workflow_dispatch:
+    paths:
+      - ".github/workflows/docs.yaml"
+      - ".github/mkdocs/**"
+      - "docs/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: .github/mkdocs/mkdocs.yaml
+          REQUIREMENTS: .github/mkdocs/requirements.txt
