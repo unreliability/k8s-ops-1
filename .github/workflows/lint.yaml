@@ -42,4 +42,4 @@ jobs:
       - name: Lint Ansible Playbooks
         uses: ansible/ansible-lint-action@master
         with:
-          file_or_dir: "./server"
+          targets: "./server"
