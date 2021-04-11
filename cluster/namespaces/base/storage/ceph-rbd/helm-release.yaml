@@ -101,4 +101,4 @@ spec:
           pullPolicy: IfNotPresent
     configMapName: ceph-csi-config
     # configMapKey: ceph-csi-config
-    # externallyManagedConfigmap: true
+    externallyManagedConfigmap: true
