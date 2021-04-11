@@ -1,5 +1,5 @@
 ---
 creation_rules:
-  - encrypted_regex: '((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))'
+  - encrypted_regex: "((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))"
     pgp: >-
       B3BB654B6CAAA312F49C37DF9CEFDEA122154047
