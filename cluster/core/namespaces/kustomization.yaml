@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
 - calico-system.yaml
 - cert-manager.yaml
-- flux-system.yaml
 - home.yaml
 - kube-system.yaml
 - media.yaml
