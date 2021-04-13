@@ -1,8 +1,8 @@
 ---
-- name: cluster | flux | apply  gotk-components
+- name: cluster | flux | apply gotk-components
   community.kubernetes.k8s:
     state: present
-    definition: "{{ lookup('file', '../../../../../cluster/flux-system/gotk-components.yaml') }}"
+    definition: "{{ lookup('file', '../../../../../cluster/base/flux-system/gotk-components.yaml') }}"
 
 - name: cluster | flux | create flux-system deployment keys in flux ns
   community.kubernetes.k8s:
@@ -35,4 +35,4 @@
 - name: cluster | flux | create flux-sync staging resource
   community.kubernetes.k8s:
     state: present
-    definition: "{{ lookup('file', '../../../../../cluster/flux-system/gotk-sync.yaml') }}"
+    definition: "{{ lookup('file', '../../../../../cluster/base/flux-system/gotk-sync.yaml') }}"
