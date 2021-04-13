@@ -1,0 +1,39 @@
+# yamllint disable
+apiVersion: v1
+kind: ConfigMap
+data:
+    config.json: ENC[AES256_GCM,data:5apjEKg/baWb5gm8UNxdNOKkZXsg18ybDKVeL9Ke9uko2ov70iA6HNXjX2Sej3sQICGmfTztGYyfVELFSccqkERW1Bsj46bsrm+mSjDXQ0i4KlX2jZLMASwKofM4EYUfwWKzOQERj/lz5uD2Hv8fUC3W5pOqdFgemTaXMxq4qAG4K4rFwtH+HWGZfMZ2HySMEk5/UhB0/v6kIJPmijd4I26zMN6FPk3Tu+ohsuRDlqmvJbpUyjFhfY+3sdvgD1Q=,iv:KtFaanZ3J6VUTQy9yzJeF3syhDamoLKiGB+Rnlx+Si4=,tag:ztDLaKzBpU5xLuDpdv3RgA==,type:str]
+metadata:
+    name: ceph-csi-config
+    namespace: ceph
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-04-13T01:36:11Z"
+    mac: ENC[AES256_GCM,data:1rjsISRq1QR9/5e3Dgg8wW/14Jh+/LYkeap+aEz/mkVyzJvpT2jRElnbe12ZJQSfe0/DLm/pBct5FhcVYJhaU/9rgdpx5Nzdvp5euqBABcN4IXYDjnEv/Syuii/wqZwa2gXBawHxM3uwT33IWWSWEFGk3YKA9hYcqE3/JyTYBVM=,iv:rDEAHddcCz/DnTysR9dQDM3zXUqxvr2ONMGNf3R2UGg=,tag:PQEJ6KcobEvMzVbeXFhdpw==,type:str]
+    pgp:
+        - created_at: "2021-04-13T01:36:10Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ//bsje5ljM1TuLjzKrBin5KebxfQanfT6Xknyniypzi6ly
+            ojW0PsvfQqm+nqm+8ZNr3TCXuh7iSSqH4nJL5om2LN9vjtIdhrkQOAN39nXSZBrA
+            SDqNa8ygaHKeMkHAbkuG5ehxm79UrBLIn9ezdvUd9An1mjApN7NKYbVqFbh/oWQb
+            nE1DJce6qWkJnTHi5n3vSh5L9bmMmBplQeVpO4JaDE1ErXYXYxj7r2cFeV5U/y4d
+            C0GKu+QFS3u6sHDEPdNhgzx/3utib4uzJPnZhcmVAgkj+5FhlSr/gXB7RCVnrbYQ
+            akqhHFuo6ZMfIMOiBl3K1DrdGh1FqqnVMWUa9eVUgzhofIR5aQfIrBietOTG0m+c
+            eYFgaMGEPtlsvm+ikMzkvtwc4jLydy2LO8qLdySwEhdCBQO9KD1dRjf/hDALR3z/
+            kwPaDVs0Jd60MJ7C+/I5cRSjJg5Y4DQ5/cUojoGMflQBeBOItLlhZ9t6ZFIdjio7
+            joO0f3FFvENJj2nTAdWbqwfVcpestoFXO62ye3vXFlBIstKYZfuU+/+DLD5HaZKt
+            fbaOeOm08VSBqF/kQeuhS4js9CYvzZy7xciX9HZlHUw8yz4m5YtSo/2p8Tg8TDKX
+            V8rSAI5AnnhDXG24o8iVeHAMPypFlaTY4iGiQS3l8Vg8NRtwsHoC54vKbv/FWWjS
+            XgHPQEt9v/ZBALunHDjXqsMrVOgtcooQy4INZIYuA31oQZboxj/v/qXNPV970nrn
+            Fs40whQLn7ZK1ZcAEHewh4I/iHdYJc2dDwLtELsrGTxxyPvKLDVgmfyJm4cdHEI=
+            =ueyo
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
+    version: 3.7.1

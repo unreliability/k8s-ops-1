@@ -1,0 +1,41 @@
+---
+# yamllint disable
+kind: Secret
+apiVersion: v1
+metadata:
+    name: cloudflare-cert-manager-token
+    namespace: cert-manager
+data:
+    api-token: ENC[AES256_GCM,data:oT36X+YdX4DJCGyp/gNuB57PQ+fbFz/8NGpyGlacwkLt9Qw5qm5lsyo50ack1NOli6JpbiGuH2o=,iv:a3HAWxVhycpz3uJzjbfwcLsg8b+Zrt00J3ozrC0Bsig=,tag:g8cGM9nQY/4xdjJW2yK4Lg==,type:str]
+type: Opaque
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-04-13T01:37:33Z"
+    mac: ENC[AES256_GCM,data:A2ySvmWTGK1ZA8EIrQCNI3u5Q2/7p1anT5iX9R+rWjYswjLJ+K8I0F0nthimGJnyYcYLeeMoriT7Uq0lNwdOnLVx2zmWvmZPXBRexewa2fNVjnOOjSn3Z091nTxSS1oNljW7Tlr5Gd3jcF+eMswxu0ibmnFeQ0aTsC++pkYHyBE=,iv:H+HZEfb63TVwgyAuLHZPHMJX6DdVPozD5WuwRWUhuZM=,tag:xVwYt3FISKp1Zr4GqN7+MA==,type:str]
+    pgp:
+        - created_at: "2021-04-13T01:37:33Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLARAAxerpl6cl0dowC7vQAVcQtV8YMc4l2FoLkFNaL+4/k7hA
+            PPLmT7tnt/WrVDcjTIjyiv7l8j+pcMrPUH17QwRxqNQMn9J1M7YoN4NqqOoFP/XC
+            1994lA1Is5DInFmkMEoy9QBJGGoDSQH2eBBuCeKJGPK5X7X2/SK9gvDZSGaDOFG1
+            fyJmATFwfgcy2fSO0Rn9SjcHXSGJMSg2tPGXn+QwkVhcxceVNmB0P6VgnBX1uebR
+            4SATza1YO9+R7FDmdUk6+LAi6IN8My1rLrWS7Cpx92rU0jky3uw0MhtKWspDkn1v
+            11KWILF4NzNnTRILQmwxg5wUkdYVsWC1kN6s64a3+dbSYtIn9qIZaDxHUyeqfBBn
+            D4K/rSF8qgVTamCJ2XCc8sODdPgHA4S5EJz0Zq5QKMK+aV4orRbFEijAr1lVO/Ve
+            6ZEng2qUdLBAvqNtmDTo1yacrfIosaN6kFkSitT7SIExHIid+xQCz+q7zpb/p3/W
+            ncPNQgXaOyx4fjWd0EgYHjUyvh2xRYxmUmaJS5gyEh5CBuBTXdl/P+VdeSGtS8DR
+            /7PhaLnlrbmnSCQ49NwvPaqNdBtsIq1vczvEJEmhZ5+CA/j5/YEfJqJVDw3OUC/s
+            s5xCKhybvWg92c6MCbV/xqXXX2xahHjKrzzJoofDU8tETsOMZlL2OI+iPVZvMPbS
+            XgHI83rlRAJDBPTy2EKIhkLXcCuGJNSHljvG9QYYgIScx0K7k24UZTndZHnDqntb
+            GntzLmgt4bk62nwI/LnhA3hdKmWS4rO7Zl1TdJ1ohJ4uLsGuYA4VhE44THPAarQ=
+            =Mu8H
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
+    version: 3.7.1
