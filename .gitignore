@@ -17,3 +17,5 @@ server/ansible/roles/xanmanning.k3s*
 server/ansible/roles/geerlingguy.pip*
 server/ansible/roles/andrewrothstein.calicoctl*
 server/tests/node_modules
+# SOPS
+.decrypted~*.yaml
