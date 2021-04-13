@@ -6,6 +6,8 @@ vars:
     sh: git rev-parse --show-toplevel
 
 includes:
-  ansible: .taskfiles/Taskfile_ansible.yaml
-  deps: .taskfiles/Taskfile_{{OS}}.yaml
+  ansible: .taskfiles/Taskfile_ansible.yml
+  deps: .taskfiles/Taskfile_{{OS}}.yml
+  kustomize: .taskfiles/kustomize.yml
+
   # secrets: .taskfiles/Taskfile_secrets.yaml

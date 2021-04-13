@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: flux-system
+  name: cluster-settings
+data:
+  CLUSTER_LB_INGRESS_EXTERNAL: "192.168.69.100"
+  CLUSTER_LB_INGRESS_INTERNAL: "192.168.69.101"
