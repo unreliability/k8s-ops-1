@@ -20,4 +20,4 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - "flux-receiver.theredone.dev"
+        - "flux-receiver.${SECRET_CLUSTER_DOMAIN}"
