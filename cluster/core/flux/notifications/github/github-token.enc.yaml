@@ -1,0 +1,39 @@
+# yamllint disable
+apiVersion: v1
+kind: Secret
+metadata:
+    name: github-token
+    namespace: flux-system
+stringData:
+    token: ENC[AES256_GCM,data:IkmjBmIIvb6Ded51sgrIWESo2V6FmWeteORRgLS5ZSctmxfLLGX6wA==,iv:LQ2TUsMzZRRi0MQMq53brP1gIWcD98KcIPHJB9z/TLA=,tag:hnmreret7G5A+vzE4IgA7g==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-04-16T22:18:04Z"
+    mac: ENC[AES256_GCM,data:GVdft0FXJhPghfVetClA37c+uyfsm6RIEhmHqVlJ8gc2hpwN4PAVs36qXG87T1Yxr8OgpWNT6e+TFQfT1l5uus9BhqPZoklZahCAdU2kn8qdZatJ9TLR1qHV3MlvR+5tdFbNqyjMYVwtC3ym35PH2j85G+GX5FVlF26Ni1slawU=,iv:gXDr7o6VE2KrXeawT8IRBTRP2XnyLnnk6T6svhdCe2c=,tag:wpvhK8UiwQGGeEdDRb5jSg==,type:str]
+    pgp:
+        - created_at: "2021-04-16T22:18:03Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ//c1GfpFlQAc2hb6+7dAlOCCZm4iwY+nFINgbFwpdlUpXK
+            tVQws4ngsCPyXiQrjLHngHGxGAuC+3XVZLN8zeCh6osTJ5bPoswEawcqQbQ5RJdF
+            3888BB+uRuKrYxvWlrb/XSi8gh6VyyQ2r6dvIRtNc9FwL9PrwgaWWSHA8eksDn15
+            sPPAHDYvgB9N46w8224XzhifYV4MUBBuuKOUOrVeUIGzkSVwhlCWP/8H6VjzKmYK
+            2V2mEM5fBDoWaBpxguJbJ/w+4+VbqoZP3s/kXe2uSUHKRbh8ENU9e05zyqMi2okl
+            lK6AxGCpLjbuipWw7i9zpqAqUXmXXcSb/+VZ7CRnwzThpV1IOuIYPlLCIerwqULk
+            Bj4jo/3dUWonwoz/tTnZGOmjCvT3yHNcT4eUMAt/ma2Lxzl9gUx4XIxHXrfmM1eD
+            vSmza1Vt7k8uMmcN/UfiphHI5iz3ynByoq1DRFpIosmYQcQcnxHGBIBqU41PJrzQ
+            aMA+IjJNrW8bUAJKWPUFh/gY7xgeg+dMqAgtW8UY5qHLRCWfHpeVeDWD2zfwQPHe
+            vb1UDFlZCDJsm6xDGdSdcBBaUrelK8qBfH2UOvBCGCCy9P5mz/CPL75Re3LGbifI
+            FHaLe5g1gKuk9oW+b9jMG0WKXVh+kScoa4c1DMki9v2wYhAA/d+m3uTtc8wJE/LS
+            XgEGiGgPevYJCw9KH4cPiH8iYytbJ4PMEcPVk/y9TFodrZA0334JDLD1JNB3MSVQ
+            CJyBf/gaAohO3rA+XjQAf/lTMnBS+v1LuR/Fv+vtVNQqPankjUmnBpYdtrKJz4k=
+            =6URv
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
+    version: 3.7.1
