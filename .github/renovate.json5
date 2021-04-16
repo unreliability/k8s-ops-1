@@ -12,31 +12,31 @@
   "kubernetes": {
     "fileMatch": ["cluster/.+\\.yaml$"],
     "ignorePaths": [
-      "cluster/flux-system"
+      "cluster/base/"
     ]
   },
   "helm-values": {
     "fileMatch": ["cluster/.+helm-release\\.yaml$"]
   },
   "regexManagers": [
-    // regexManager to read and process HelmRelease files
+    // regexManager to read and process HelmReleases and CRDs
     {
-      "fileMatch": ["cluster/.+helm-release\\.yaml$"],
+      "fileMatch": [
+        "cluster/.+helm-release\\.yaml$",
+        "cluster/core/crds/.+\\.yaml$"
+      ],
       "matchStrings": [
-        "registryUrl=(?<registryUrl>.*?)\n *chart: (?<depName>.*?)\n *version: (?<currentValue>.*)\n"
+        // helm releases
+        "registryUrl=(?<registryUrl>.*?)\n *chart: (?<depName>.*?)\n *version: (?<currentValue>.*)\n",
+        // kube-prometheus-stack crd
+        "registryUrl=(?<registryUrl>.*?)\n *tag: (?<depName>[a-zA-Z-]+)-(?<currentValue>.*)\n",
+        // rook-ceph crd
+        "registryUrl=(?<registryUrl>.*?) chart=(?<depName>.*?)\n *tag: (?<currentValue>.*)\n",
+        // cert-manager crd
+        "registryUrl=(?<registryUrl>.*?) chart=(?<depName>.*?)\n.*\\/(?<currentValue>.*?)\\/"
       ],
       "datasourceTemplate": "helm"
     },
-    // regexManager to read and process actions-runner-controller runner images
-    {
-      "fileMatch": [
-        "cluster/actions-runner-system/runners/.+\\.yaml$"
-      ],
-      "matchStrings": [
-        "image: (?<depName>.*?):(?<currentValue>.*?)\n"
-      ],
-      "datasourceTemplate": "docker"
-    }
   ],
   "packageRules": [
     // setup datasources
@@ -83,30 +83,54 @@
       "matchDatasources": ["helm"],
       "matchUpdateTypes": ["patch"],
       "labels": ["renovate/helm", "dep/patch"]
-    }
+    },
+    // custom version schemes
+    {
+      "matchDatasources": ["docker"],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<compatibility>.*)$",
+      "matchPackageNames": ["blakeblackshear/frigate"]
+    },
+    // pin package versions
+    {
+      "matchDatasources": ["docker"],
+      "allowedVersions": "<13",
+      "matchPackageNames": [
+        "postgres",
+        "prodrigestivill/postgres-backup-local"
+      ]
+    },
+    {
+      "matchDatasources": ["docker"],
+      "allowedVersions": "<2",
+      "matchPackageNames": [
+        "influxdb",
+      ]
+    },
+    // {
+    //    "matchDatasources": ["helm"],
+    //    "allowedVersions": "<15",
+    //    "matchPackageNames": ["kube-prometheus-stack"]
+    // },
     // version strategies
-//    {
-//      "matchDatasources": ["docker"],
-//      "versioning": "loose",
-//      "matchPackageNames": [
-//        "ghcr.io/k8s-at-home/plex"
-//      ]
-//    }
-//    // enable auto-merge
-//    {
-//      "matchDatasources": ["docker"],
-//      "automerge": true,
-//      "automergeType": "branch",
-//      "requiredStatusChecks": null,
-//      "matchUpdateTypes": ["minor", "patch"],
-//      "matchPackageNames": [
-//        "flaresolverr/flaresolverr",
-//        "ghcr.io/k8s-at-home/jackett",
-//       "ghcr.io/k8s-at-home/plex",
-//        "ghcr.io/k8s-at-home/prowlarr",
-//        "ghcr.io/k8s-at-home/radarr",
-//        "ghcr.io/k8s-at-home/sonarr"
-//      ]
-//    }
+    {
+      "matchDatasources": ["docker"],
+      "versioning": "loose",
+      "matchPackageNames": [
+        "ghcr.io/k8s-at-home/plex"
+      ]
+    },
+    // enable auto-merge
+    {
+      "matchDatasources": ["docker"],
+      "automerge": true,
+      "automergeType": "branch",
+      "requiredStatusChecks": null,
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackageNames": [
+        "flaresolverr/flaresolverr",
+        "ghcr.io/k8s-at-home/jackett",
+        "ghcr.io/k8s-at-home/prowlarr"
+     ]
+    }
   ]
 }
