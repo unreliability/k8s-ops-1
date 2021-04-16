@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: sealed-secrets-charts
+  name: ceph-csi
   namespace: flux-system
 spec:
   interval: 10m
-  url: https://bitnami-labs.github.io/sealed-secrets
+  url: https://ceph.github.io/csi-charts
   timeout: 3m
