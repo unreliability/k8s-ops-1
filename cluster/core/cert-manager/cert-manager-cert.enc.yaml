@@ -1,12 +1,11 @@
----
 # yamllint disable
 kind: Secret
 apiVersion: v1
 metadata:
     name: cloudflare-cert-manager-token
     namespace: cert-manager
-data:
-    api-token: ENC[AES256_GCM,data:oT36X+YdX4DJCGyp/gNuB57PQ+fbFz/8NGpyGlacwkLt9Qw5qm5lsyo50ack1NOli6JpbiGuH2o=,iv:a3HAWxVhycpz3uJzjbfwcLsg8b+Zrt00J3ozrC0Bsig=,tag:g8cGM9nQY/4xdjJW2yK4Lg==,type:str]
+stringData:
+    api-token: ENC[AES256_GCM,data:4uEMSnvoofxkAFoeq1Ifz9vXplIDBaYioQsiLzG7NaHUkL5NVL/F6Q==,iv:lSYTDTXlOW13M2Pk7be3VvfgHmULcBT7zjOjucjsAbU=,tag:G2ECFn5V2ezAf7vsQHxozw==,type:str]
 type: Opaque
 sops:
     kms: []
@@ -14,8 +13,8 @@ sops:
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-04-13T01:37:33Z"
-    mac: ENC[AES256_GCM,data:A2ySvmWTGK1ZA8EIrQCNI3u5Q2/7p1anT5iX9R+rWjYswjLJ+K8I0F0nthimGJnyYcYLeeMoriT7Uq0lNwdOnLVx2zmWvmZPXBRexewa2fNVjnOOjSn3Z091nTxSS1oNljW7Tlr5Gd3jcF+eMswxu0ibmnFeQ0aTsC++pkYHyBE=,iv:H+HZEfb63TVwgyAuLHZPHMJX6DdVPozD5WuwRWUhuZM=,tag:xVwYt3FISKp1Zr4GqN7+MA==,type:str]
+    lastmodified: "2021-04-17T16:53:37Z"
+    mac: ENC[AES256_GCM,data:wPKi7/HP7zWnvzE6NuhL+ElPtANs+OnlfDxCDtuGMXNjVbEAEhqbGAAuq2qCMZPWDKxUuhIFNQEqZohr8QGWDKQPVlcD2yDgMOtfWAPuF/u4BSs4F1nP5IPLpLglzFJ6O4Sr2uH5PR5qPx/IH97ZVPI3h9cpI5N/WAo4B0kqgCg=,iv:ECIX0sOjqfhCb/TU5pBD74u25i/uNjJYRaFwcCVCuhQ=,tag:Y6GdiKCIc97V7Ugyd3vBGw==,type:str]
     pgp:
         - created_at: "2021-04-13T01:37:33Z"
           enc: |
