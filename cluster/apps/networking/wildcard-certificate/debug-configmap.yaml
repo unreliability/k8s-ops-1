@@ -4,5 +4,6 @@ kind: ConfigMap
 metadata:
   name: ${SECRET_CLUSTER_DOMAIN/./-}-tls
   namespace: default
-data: |-
-  Hello ${SECRET_CLUSTER_DOMAIN/./-}-tls
+data:
+  config.text:
+    Hello ${SECRET_CLUSTER_DOMAIN/./-}-tls
