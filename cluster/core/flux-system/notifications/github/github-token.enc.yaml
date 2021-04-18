@@ -5,15 +5,15 @@ metadata:
     name: github-token
     namespace: flux-system
 stringData:
-    token: ENC[AES256_GCM,data:IkmjBmIIvb6Ded51sgrIWESo2V6FmWeteORRgLS5ZSctmxfLLGX6wA==,iv:LQ2TUsMzZRRi0MQMq53brP1gIWcD98KcIPHJB9z/TLA=,tag:hnmreret7G5A+vzE4IgA7g==,type:str]
+    token: ENC[AES256_GCM,data:c+BBK5d3YcadGhtf5vjfpmjjqCLH2uk0eo1kWp0DXH797BxJcdnmOQ==,iv:vaFwDXrD5LaNt/wXpeBWJMz1K2w1JmvfNAYlLf87S0s=,tag:ZJAFS4WTPyvkFdXeaoCu1w==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-04-16T22:18:04Z"
-    mac: ENC[AES256_GCM,data:GVdft0FXJhPghfVetClA37c+uyfsm6RIEhmHqVlJ8gc2hpwN4PAVs36qXG87T1Yxr8OgpWNT6e+TFQfT1l5uus9BhqPZoklZahCAdU2kn8qdZatJ9TLR1qHV3MlvR+5tdFbNqyjMYVwtC3ym35PH2j85G+GX5FVlF26Ni1slawU=,iv:gXDr7o6VE2KrXeawT8IRBTRP2XnyLnnk6T6svhdCe2c=,tag:wpvhK8UiwQGGeEdDRb5jSg==,type:str]
+    lastmodified: "2021-04-18T17:54:14Z"
+    mac: ENC[AES256_GCM,data:ViEij86BbhTZRG8tbdXagu1pmpkWJPNmyXsU6jg42uuoGjexl6D3yS7XYZ3dgNF8WKos7UDbEohskP8AbuD3gGwDh/vhFuspeCB94BRKMSerIslC1xw+39zymCV32tvdPXwYwtqW0ypk4kY1+C8bUECi7872Xe9/tfLxWaUuKaI=,iv:CRmXk3OR3Ce3af3u3u0cBe4E8BehkFQrcp5MgPfPrnM=,tag:RPpViYeVhWSSBsc2elpBEQ==,type:str]
     pgp:
         - created_at: "2021-04-16T22:18:03Z"
           enc: |
