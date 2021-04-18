@@ -5,7 +5,7 @@ metadata:
     name: cloudflare-token-secret
     namespace: cert-manager
 stringData:
-    cloudflare-token: ENC[AES256_GCM,data:ockwn1iHf8z2jRZ5HItJFvqR4ZuRi9cJdVG+tiig/QKOiEZFIwQQAA==,iv:QTvVBMe53fXLMaFkvfDqFWk4iGPWnOzWID/S5dz7Srs=,tag:EEZF1nJ2RzJtCOOiolxfyA==,type:str]
+    cloudflare-token: ENC[AES256_GCM,data:QGc8Qpi9Oywqri9pzrVBUp/9o45T9gvz/LBC8UOGqp3uY/LxFw==,iv:BfhLCoroi1QMkx9g3gbmDtWwQHGpXu+2a7iuGcDXSps=,tag:nuXZM1+Kt7//mrp52bjfqA==,type:str]
 type: Opaque
 sops:
     kms: []
@@ -13,8 +13,8 @@ sops:
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-04-18T16:05:11Z"
-    mac: ENC[AES256_GCM,data:o+KNRqsMT5zGRnSci1lMgbSmdWmLQ7RSrmPByzR5jmcOQL0e+AjCcQf7WbRcc2MyctD4r/G+S8X0lAyHp6zy2Kc8hVICZf0L+pQb3GgPhHGI/lB4sEsfZ2sNDwC2bin1CssgwhmCaZW2ppYWpY89lQTEsD9SoEnkIwkmZ0JoDoQ=,iv:lEvYOjGD2279aKoCvAISg3iBVjE1eA3nlpCZWaBLeQY=,tag:h9gUNP4DLw7DodwqB8N64w==,type:str]
+    lastmodified: "2021-04-18T16:38:43Z"
+    mac: ENC[AES256_GCM,data:RffDAkVymzMz5yZfFN51q7Vcc2jt3/ELxBLITspymvjFcwwONd6KnNsPmD3dnHaTiFnRyRrLEtzXpyqkO9qFSQiHGiSn8cSEsTxPzii4LHTaIGdqAGjE7yrp08C+6vjgaIQqxqWhq84+p2nPqnPV/iJzX/8NJIiSbIVA0IgA93g=,iv:uD8w5Bx9DY2kwSNBONps1gMMvtTG5XHXwXOPoZMRUaU=,tag:475WoGt6FjVaOJ6A/WtbUA==,type:str]
     pgp:
         - created_at: "2021-04-13T01:37:33Z"
           enc: |
