@@ -22,7 +22,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 15m
-  prune: true
+  prune: false
   sourceRef:
     kind: GitRepository
     name: external-snapshotter-source
