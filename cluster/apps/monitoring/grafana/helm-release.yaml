@@ -68,6 +68,9 @@ spec:
           url: http://loki:3100
     dashboards:
       default:
+        cert-manager:
+          url: https://gitlab.com/uneeq-oss/cert-manager-mixin/-/raw/master/dashboards/cert-manager.json
+          datasource: Prometheus
         # Ref: https://grafana.com/grafana/dashboards/12175
         calico-felix:
           gnetId: 12175
