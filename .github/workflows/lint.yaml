@@ -33,13 +33,13 @@ jobs:
           path: "./hack"
           level: "error"
 
-  ansible:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-      - name: Lint Ansible Playbooks
-        uses: ansible/ansible-lint-action@master
-        with:
-          targets: "./server"
+  # ansible:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 1
+  #     - name: Lint Ansible Playbooks
+  #       uses: ansible/ansible-lint-action@master
+  #       with:
+  #         targets: "./server"
