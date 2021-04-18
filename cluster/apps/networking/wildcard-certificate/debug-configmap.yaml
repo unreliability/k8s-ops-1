@@ -1,9 +1,0 @@
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ${SECRET_CLUSTER_DOMAIN/./-}-tls
-  namespace: default
-data:
-  config.text:
-    Hello ${SECRET_CLUSTER_DOMAIN/./-}-tls
