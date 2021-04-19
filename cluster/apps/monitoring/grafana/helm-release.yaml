@@ -87,3 +87,5 @@ spec:
       datasources:
         enabled: true
         searchNamespace: ALL
+    podAnnotations:
+      configmap.reloader.stakater.com/reload: "grafana"
