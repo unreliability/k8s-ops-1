@@ -16,21 +16,9 @@ spec:
         name: ceph-csi
         namespace: flux-system
       interval: 10m
+  timeout: 30m
   values:
-    encryptionKMSConfig:
-      {
-        "vault-tokens-test":
-          {
-            "encryptionKMSType": "",
-            "vaultAddress": "",
-            "vaultBackendPath": "",
-            "vaultTLSServerName": "",
-            "vaultCAVerify": "",
-            "tenantConfigName": "",
-            "tenantTokenName": "",
-            "tenants": {},
-          },
-      }
     logLevel: 0
     configMapName: ceph-csi-config
+    kmsConfigMapName: ceph-csi-encryption-kms-config
     externallyManagedConfigmap: true
