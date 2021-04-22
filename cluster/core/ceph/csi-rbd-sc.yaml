@@ -8,6 +8,8 @@ provisioner: rbd.csi.ceph.com
 parameters:
   clusterID: 83ef3c72-c17b-4b1d-b89f-512d8d08268c
   pool: kubernetes
+  imageFormat: "2"
+  imageFeatures: layering
   csi.storage.k8s.io/provisioner-secret-name: ceph-rbd-secret
   csi.storage.k8s.io/provisioner-secret-namespace: ceph
   csi.storage.k8s.io/node-stage-secret-name: ceph-rbd-secret
@@ -16,5 +18,3 @@ parameters:
   csi.storage.k8s.io/controller-expand-secret-namespace: ceph
 reclaimPolicy: Delete
 allowVolumeExpansion: true
-mountOptions:
-  - discard
