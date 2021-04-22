@@ -17,13 +17,6 @@ spec:
         namespace: flux-system
       interval: 10m
   values:
-    rbac:
-      create: true
-    serviceAccounts:
-      nodeplugin:
-        create: true
-      provisioner:
-        create: true
     encryptionKMSConfig:
       {
         "vault-tokens-test":
@@ -39,61 +32,5 @@ spec:
           },
       }
     logLevel: 0
-    nodeplugin:
-      name: nodeplugin
-      updateStrategy: RollingUpdate
-      httpMetrics:
-        enabled: true
-        containerPort: 8080
-        service:
-          enabled: true
-          servicePort: 8080
-          type: ClusterIP
-    registrar:
-      image:
-        repository: k8s.gcr.io/sig-storage/csi-node-driver-registrar
-        tag: v2.1.0
-        pullPolicy: IfNotPresent
-    plugin:
-      image:
-        repository: quay.io/cephcsi/cephcsi
-        tag: v3.3.1
-        pullPolicy: IfNotPresent
-    provisioner:
-      name: provisioner
-      replicaCount: 3
-      deployController: true
-      timeout: 60s
-    httpMetrics:
-      enabled: true
-      containerPort: 8080
-      service:
-        enabled: true
-        servicePort: 8080
-        type: ClusterIP
-      provisioner:
-        image:
-          repository: k8s.gcr.io/sig-storage/csi-provisioner
-          tag: v2.2.0
-          pullPolicy: IfNotPresent
-      attacher:
-        name: attacher
-        enabled: true
-        image:
-          repository: k8s.gcr.io/sig-storage/csi-attacher
-          tag: v3.2.0
-          pullPolicy: IfNotPresent
-      resizer:
-        name: resizer
-        enabled: true
-        image:
-          repository: k8s.gcr.io/sig-storage/csi-resizer
-          tag: v1.1.0
-          pullPolicy: IfNotPresent
-      snapshotter:
-        image:
-          repository: k8s.gcr.io/sig-storage/csi-snapshotter
-          tag: v4.0.0
-          pullPolicy: IfNotPresent
     configMapName: ceph-csi-config
     externallyManagedConfigmap: true
