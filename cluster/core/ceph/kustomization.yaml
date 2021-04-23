@@ -5,5 +5,4 @@ resources:
 - csi-config-map.enc.yaml
 - helm-release.yaml
 - csi-rbd-sc.yaml
-- ceph-csi-encryption-kms-config.enc.yaml
 - servicemonitor
