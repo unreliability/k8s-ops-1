@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - csi-rbd-secret.enc.yaml
 - csi-config-map.enc.yaml
-- ceph-csi-encryption-kms-config.enc.yaml
 - helm-release.yaml
 - csi-rbd-sc.yaml
+- ceph-csi-encryption-kms-config.enc.yaml
 - servicemonitor
