@@ -5,8 +5,8 @@ resources:
 # - blocky
 # - coredns
 # - external-dns
-- ingress-nginx-external
-- ingress-nginx-internal
+# - ingress-nginx-external
+# - ingress-nginx-internal
 # - oauth2-proxy
-- secret-reflector
+# - secret-reflector
 - wildcard-certificate
