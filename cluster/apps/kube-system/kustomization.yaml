@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 # - descheduler
 # - intel-gpu-plugin
-# - metrics-server
+- metrics-server
 # - node-feature-discovery
 - node-problem-detector
 - reloader
