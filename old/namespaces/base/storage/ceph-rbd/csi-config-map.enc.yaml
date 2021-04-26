@@ -2,37 +2,40 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  config.json: ENC[AES256_GCM,data:+0QThNX8PcXoLOkVVK+RNsQpMAjull7m0MAzE5AmyYlniMpY3QG/6glAzB0aLvLW01YDUf5/yOjMzqyLzHmmEKOQgI2ldSBafZcOjGG+/BIpdYyac7jq6EV2qbjQ/4VMYcHztzYtOwkPtAdplnsauxypBqW/8snLU6DtX9TN77QJ3HO37lofRotykL0T3k4OKuYTeS3YlPGH/NzQGbHJqHvjbO8DSSNikVf44gaJoIIWWnCRGUEUBykg2z1uhwM=,iv:YvPN/D7CCfTyD3eetj1DIc9HAtVNkb5BLlFYQ9u0dbs=,tag:4WmIdIN0OLHOk9M3NRyiaQ==,type:str]
+  config.json: ENC[AES256_GCM,data:0KGrvjQfWovugOTLxBgylyP/EDdO4Jeo1Si5daZuTy1SKDQfv89sUepcwB0y1YnH8llECQ1Z2tvnIBEc/fRQNUbRWIlGmTahX/SQ+51DeSfDUOaCaf/+22et27SVV4rgf/FBzM8EJEQAdj5X/beC6GnBYf+LZoOY0lG5Qad+fJ3rVAbbTjcjVG2upKCuWmnsHEkB/Pi5SxuoHj1eOQkXZjy1vxsQVke9q4RCf4ZVAHArWHsrhzsrp8+aseiNHu4=,iv:YvPN/D7CCfTyD3eetj1DIc9HAtVNkb5BLlFYQ9u0dbs=,tag:2a3fRgOePEzzR2EyXd6G7Q==,type:str]
 metadata:
   name: ceph-csi-config
   namespace: ceph-rbd
 sops:
   kms: []
-  gcp_kms: []
+  gcp_kms:
+    - resource_id: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+      created_at: "2021-04-26T18:04:19Z"
+      enc: CiQA1r6bIPi4O03exyDzhPCMI31cFY6wYJo/rRei8fcytFb+zpgSSQCbI6ieL6ipSC7HzvjLyvhw07dGlpk1fxrNlheT7k0ObQCuM+EFCLMZPd4SgKVFHDFfpXsCmyzgpXeBgFGcsfNF9zhvomrG/l4=
   azure_kv: []
   hc_vault: []
   age: []
-  lastmodified: "2021-04-11T00:03:26Z"
-  mac: ENC[AES256_GCM,data:Qz7K7nFQmVwiX9p4GDOm9hN35kjoYv814VFHX3RTGVq3JRNVUNPq+C+/7EY7R0C77BhY4BRaHlHaitR8TNX15t+uzLqfUFNFHcFcoAci1EETNNpUcC1rUACbBmPnLBiWKEXSicukCchw0hkqG8FmlyzveyPG+NzmgGxz1bejiug=,iv:kIOpuMxE405Lb8Aj1p5JdF3yZO4Up6lcnGAb9tPn3Mc=,tag:C9tu1YemhltUjCHR+Zi4dQ==,type:str]
+  lastmodified: "2021-04-26T18:04:20Z"
+  mac: ENC[AES256_GCM,data:rzRsocnY9GMIHrEYOi8YsUZPwEdzzprAdBb7Jul2tKVCjjgVmoqdI7z79kXxV2dKlhMaqxglMJmrC2QnLkDi+yeYfV/m8FPEaSR/OrqEpUh4hmNDdykqPMmbrfYtc95RFyykxEaCsm8et28glqTMVHkpLVvy7AT+FzGLkoGhvMc=,iv:BBrM+xXhmlEg1TAxZILINrFNFdbZbOcvbP96zayC44k=,tag:ejrKYZvMx8X2ONH3FYqRQw==,type:str]
   pgp:
     - created_at: "2021-04-11T00:03:25Z"
       enc: |
         -----BEGIN PGP MESSAGE-----
 
-        hQIMAyQ1SH08BnVLARAAvhUtAmOHuFJ91MKVRtQZvY9HTFwWbJFWbRj4svtpJJuU
-        hNAahCurhYbYLIUsv/5Zz2NiH7mY1d79Fcg2DNBg3xtWyGMxq4lz6JvYePacHPVJ
-        jK5HEMZXp7BgzDpk7fGXs3X6dKaHJnDEJUcseYn7hr3uMbJzAiYNI6+Y+wEUF3sd
-        f+m/cdHZ8Qmj6peOr2NiYLya/aLEz0gPw9R4X1jzcEpcomIoorAaqmslE5FaJyia
-        E5e9xh5ouNNrc17RCHLWSoQa4KXfWHg3JrQeODUVGxFNeMN59rhEGEZVIyyyJEKn
-        YDFc29rMdMC8ntl2GJeShHuXSJRkaP+uQR0NO/AK1ixUSITBC7aFVY/ZRSWQpE1J
-        7giKfe5GQP8VneyTIQh/5sbko+2J4y29/RGMB46wRi2FvgV+b/q3FWkCpEcVMOtW
-        k7mGm6eB4gZi0U6AnFTrlAVEflFa5pDB0x/ndzvbx8La5jpzo9Mxe0U1NPjo8Yms
-        sv8dfXzPdz4iEeWyCiOxTW5+Q0IGnnvf0wjj7HbCljMiJjDAuxtACPRmkOwV2skS
-        LVA3K9s+aTAw32BYANvqbHwU8kcz2iJJNHWwQCc4auQZ6BR4a9sE6wWMY90fjmYA
-        bdCdqLwk7t4kbMmk39alBGgSgg+2u+jLSFkGzRTaM+sYVodb5Yq5M+NEyEi7nf7S
-        XgGW0UcuK5jvUfN6Jp0kp8Hsv9A5vSwxM+v/lD5cGhFjuwQMYwsayQuLT7/M7cJ1
-        w6WalBX4nicteU6tui2Zz1pDaI1ayGyJ+gxpWCrka1PbHsfZO19F1w6lmYKFqNQ=
-        =th6y
+        hQIMAyQ1SH08BnVLAQ/+NRP0Ewd7JPAMcIVKouT78AVDK6QStKMO7myLJOiJP9KM
+        SEdYapq4pPZnKRUZX3WVMvOXonr7QB5iC8PmjwVKqfHLGuafCgqO+xr5bqqKuJLe
+        Zp/H9L9jhwW4NbnMFJ7ytfyelATIyN282g8zeGlY4u0XvrhjGP24LAu1E06Zs0EC
+        VgPyfnRcr/q7S0WlcmP32lq5/tArvW2bi2SmLLR4DRPyrPgKs/1EXILUglVuVA+0
+        9vN5P5I917mpvXnc01hQyNGb2E9mvuuk3T3picXE7+esKnG4nnDujN9R5GEgJZ+z
+        MqnYzjJOUMjQ4bJueNuoETlFKiIiYxm5GUTirR6ta9csM7U9DfsQ+EYb0KajNSLI
+        XZgLjqlzV+UK8GRKDv84zZCMrm6Cz8mjSIRA3N/LdpIv7NWkCLSKEtLnh1pktpJa
+        nQPIlG9k5+cnpq8DFsv35fcm+axG3GWP9I9ydYYbqXWP6/uW+O94Q9S1D6tTS2GT
+        oFKxN3jemNbJvv4voH+KM2s1E0oL9689PJFh5zT0WrAOcDjq+j0xI08lZJod+UGB
+        eIuVBFUN2sulgeDmZ1CH30vSYn/Mx1+SlD9sHii9GUURAm9RfyVvkwKTBMhs2eml
+        cuzRwYaKUI4VQ7FmhIFiQXUgGea+xYgKrKQOlgWgmA5PwWvxOG3rMzvoG7T6NcXS
+        XgFs/kn9WjtqHdnql6JDy+hDOSu4EqK89CCC4yryTtJJOP/E3grrCz/uIM76l6n2
+        V20bURlKdaqC6HMcQSs/+H5Xw5p2vZHooW/+LSe0L0MCJSDot1Z5kgZZyMFiZhw=
+        =7CZY
         -----END PGP MESSAGE-----
       fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
   encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
