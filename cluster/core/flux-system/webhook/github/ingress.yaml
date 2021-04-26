@@ -17,7 +17,7 @@ spec:
           service:
             name: webhook-receiver
             port:
-              number: 80
+              number: 443
   tls:
   - hosts:
     - "flux-receiver.${SECRET_CLUSTER_DOMAIN}"
