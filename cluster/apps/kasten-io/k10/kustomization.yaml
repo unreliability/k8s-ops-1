@@ -5,6 +5,6 @@ resources:
 - helm-release.yaml
 - prometheus-rule.yaml
 - service-monitor.yaml
-- policies
+# - policies
 # # TODO Enable on cluster re-install
 # - profiles
