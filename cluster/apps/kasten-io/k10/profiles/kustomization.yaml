@@ -2,6 +2,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- ceph-kubernetes-secret.enc.yaml
 - k10-b2-secret.enc.yaml
 - b2.yaml
 - ceph-kubernetes.yaml
