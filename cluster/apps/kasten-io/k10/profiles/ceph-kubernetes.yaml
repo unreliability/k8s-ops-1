@@ -10,7 +10,7 @@ spec:
       secret:
         apiVersion: v1
         kind: secret
-        name: k10secret-tt4m9
+        name: ceph-kubernetes-secret
         namespace: kasten-io
     ceph:
       monitor: ${SECRET_K10_CEPH_KUBERNETES_MON}
