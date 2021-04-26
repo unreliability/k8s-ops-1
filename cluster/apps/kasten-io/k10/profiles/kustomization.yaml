@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - k10-b2-secret.enc.yaml
 - b2.yaml
+- ceph-kubernetes.yaml
