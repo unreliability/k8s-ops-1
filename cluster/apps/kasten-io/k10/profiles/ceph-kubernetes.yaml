@@ -1,10 +1,13 @@
+---
 kind: Profile
 apiVersion: config.kio.kasten.io/v1alpha1
 metadata:
   name: ceph-kubernetes
   namespace: kasten-io
 spec:
+  type: Infra
   infra:
+    type: Ceph
     credential:
       secretType: CephKeyring
       secret:
@@ -15,5 +18,3 @@ spec:
     ceph:
       monitor: ${SECRET_K10_CEPH_KUBERNETES_MON}
       pool: kubernetes
-    type: Ceph
-  type: Infra
