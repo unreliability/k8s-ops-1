@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - home.yaml
 - k10-disaster-recovery-policy.yaml
-# - media.yaml
+- media.yaml
