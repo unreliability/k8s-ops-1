@@ -29,5 +29,10 @@ spec:
       operator: In
       values:
       - home
+      - kasten-io-cluster
   actions:
   - action: backup
+    backupParameters:
+    profile:
+      namespace: kasten-io
+      name: backblaze-b2
