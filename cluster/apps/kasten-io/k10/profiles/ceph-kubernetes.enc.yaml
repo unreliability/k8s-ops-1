@@ -1,0 +1,53 @@
+kind: Profile
+apiVersion: config.kio.kasten.io/v1alpha1
+metadata:
+    name: ceph-kubernetes
+    namespace: kasten-io
+spec:
+    type: Infra
+    infra:
+        type: Ceph
+        credential:
+            secretType: ENC[AES256_GCM,data:kVfJDdQNwl+j1Zk=,iv:jtz9hamLEPMw3UyYgLyB9QluUXBXJBlwwP5Y6Z1GxIM=,tag:6OHqe+o1DdMOqBbvroYe6w==,type:str]
+            secret:
+                apiVersion: ENC[AES256_GCM,data:EOw=,iv:YEBiA+MLbexgPzPbQH3FsPzp/s28o0iX2a1yp8IcTjs=,tag:s/0C1D6VTz3vZgGWT4Cvzg==,type:str]
+                kind: ENC[AES256_GCM,data:YfZ1So4h,iv:0n/09MncqMJF3F6bBW7mQl6UQantznf1vPSe9Rd9hBA=,tag:+2gHhRiC5G4mGpIPdQQbpA==,type:str]
+                name: ENC[AES256_GCM,data:d7qNOclNZ0Wr9IDnvKAvm3wJzeNsug==,iv:Q8LoaqiZDF9SLIgCGg+TpmfxqPxiqRlAG4khVJ6j+ok=,tag:URZp2YCTGkC+Vq6dXHCpGQ==,type:str]
+                namespace: ENC[AES256_GCM,data:p6VfLn6XbNFc,iv:AADlkiMHza7RY28F+VZFlmH3gmsjzomwX0FAja00GPI=,tag:skBpMkG67goOZFfVWH/6sw==,type:str]
+        ceph:
+            monitor: '''10.1.5.201:6789'',''10.1.5.202:6789'',''10.1.5.203:6789'',''10.1.5.204:6789'''
+            pool: kubernetes
+sops:
+    kms: []
+    gcp_kms:
+        - resource_id: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+          created_at: "2021-04-27T01:04:43Z"
+          enc: CiQA1r6bIJeTV0PdukeRWRqL/VI9sepzNMXaNziS5t8raTm01OQSSQCbI6ieSoifQRtdmBEJTvgMy20HDC8l1k2AnJ9bAaisfhYJMH1mG3u4FsrGmpGxVv0nyWvnYb5VrmY2uJRgfB/mJuufVBiqF+o=
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-04-27T01:04:44Z"
+    mac: ENC[AES256_GCM,data:YWxHIOt4pFjdmFhkYKO7S5D+r9EdmEKGpd+ao/sjeJUqNT+KFhqMOWRd5AXdGhViAbsSSXE1Dfz8PuNBr2IWMMCMsL/denVjC3BJVPWEUxb0XMV06RzDKqbLgUkWc52adtbqFkfsbATMc1d4eu9lrwk+6bJepVWtNS+hmhQf+aY=,iv:wyGOxL2O1cCcgOGIZjrlQ7zquRdQnMixH950162El+c=,tag:id26JMcF01VVwHE342gPgA==,type:str]
+    pgp:
+        - created_at: "2021-04-27T01:04:43Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLARAAvaixgLwC4d7gi33uszB0ozB+Ha1uB9hXeahOzbxjAHQv
+            4QcxwC3SIlqGacRCI1dKDM1AUj6m3w58xqafXKO2wVqPEpQ5wqdkvn7I52c6i/LV
+            pDZAuM4Z7iT+x4qp7cPjKh5w6+UfX0N5QH1mYKQTLW09uV0JRNRjfz+ua5qRN+cj
+            t4vGluu60pOU49Jf9vGf3Di3iMNg3t2cUgFZFwQ0udeFEF1YIccZufoW0OH6aqcw
+            1TikMyS390djsAQEo91blzlCZ0VcH1IqjJKP+suWq5gCX531JqkBV1+uFB+jU0GS
+            p8sKpwAd3ch09WNEfxsrfa1kLEUMYPTUSpE0P3VDvlcHRAOzco1UwvP/zWqbQUAW
+            H6Xf7NANql3IG0sCvOIwF2NrasQetVsR/DGnhh6ToVRszcy7dTRNmbXVP51S8Miz
+            gcSvMi/9CdHf4Qw0NPMHDrU6i933z9Fw6jRu2JwlDB9jGiEwPZb9E+77+rBV8aJ7
+            rqM6QgXEbfg5VdUEIIBsCdbSOA/ZHdOs4YGHtjQpxZSuifMjVNFEC2L2FqQTPvLc
+            Mi6Vf7jOSw4BxH5nzj9DH9pTM82ymtRadavtYqUgZTinCtaiz825RAwEQNmpw0/I
+            io9uwfWnEP5aHsKNWbLpoBOBvmkR3KpbJ37rgV7uqWhW45cJLxL/saVxhwsSEp3S
+            XAH8zY5Qa2hWZ/eImsxG/xvsxZ9iuUr8Ipmj6zEPibUeogCeaPCSy5AieuNzxFGC
+            5FeUH+bWr2T9llIePi0vmnyoY219rrDSBn5oFmZr5mHaw/lYoua5pMa/x3Tx
+            =A5j+
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData$))
+    version: 3.7.1
