@@ -4,7 +4,8 @@ kind: Kustomization
 resources:
 # - blocky
 # - coredns
-# - external-dns
+- external-dns-external
+# - external-dns-internal
 - ingress-nginx-external
 - ingress-nginx-internal
 # - oauth2-proxy
