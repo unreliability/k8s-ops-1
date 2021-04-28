@@ -43,7 +43,7 @@ tasks:
   k3s-install:
     desc: Install k3s on the nodes
     cmds:
-      - "ansible-playbook -i {{.ANSIBLE_INVENTORY_DIR}}/home-cluster/hosts.yaml  --vault-password-file .vault-password {{.ANSIBLE_PLAYBOOK_DIR}}/k3s/install.yaml"
+      - "ansible-playbook -i {{.ANSIBLE_INVENTORY_DIR}}/home-cluster/hosts.yaml --vault-password-file .vault-password {{.ANSIBLE_PLAYBOOK_DIR}}/k3s/install.yaml"
     silent: true
 
   k3s-upgrade:
@@ -57,6 +57,13 @@ tasks:
     cmds:
       - "ansible-playbook -i {{.ANSIBLE_INVENTORY_DIR}}/home-cluster/hosts.yaml --vault-password-file .vault-password {{.ANSIBLE_PLAYBOOK_DIR}}/k3s/install_flux.yaml"
     silent: true
+
+  k3s-nuke:
+    desc: Nuke k3s on the nodes
+    cmds:
+      - "ansible-playbook -i {{.ANSIBLE_INVENTORY_DIR}}/home-cluster/hosts.yaml --vault-password-file .vault-password {{.ANSIBLE_PLAYBOOK_DIR}}/k3s/nuke.yaml"
+    silent: true
+
 
   encrypt:
     desc: Encrypt Ansible Vault
