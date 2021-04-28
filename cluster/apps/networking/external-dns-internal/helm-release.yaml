@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: external-dns-external
+  name: external-dns-internal
   namespace: networking
 spec:
   interval: 5m
@@ -19,17 +19,18 @@ spec:
   values:
     interval: "5m"
     sources:
+    - service
     - ingress
-    provider: cloudflare
-    cloudflare:
-      secretName: external-dns-external
-      email: "${SECRET_EMAIL}"
-      proxied: true
+    provider: coredns
+    coredns:
+      etcdEndpoints: https://192.168.1.1:2379
+      etcdTLS:
+        enabled: true
+        secretName: coredns-etcd
     policy: sync
     txtPrefix: "k8s."
     domainFilters:
-    - "${SECRET_CLUSTER_DOMAIN}"
-    annotationFilter: "kubernetes.io/ingress.class=external"
+    - ${SECRET_CLUSTER_DOMAIN}
     metrics:
       enabled: true
       serviceMonitor:
