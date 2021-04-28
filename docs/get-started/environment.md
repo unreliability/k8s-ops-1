@@ -59,7 +59,8 @@ brew install kubectl
 ## [Kubetail][kubetail]
 
 ``` bash
-brew tap johanhaleby/kubetail && brew install kubetail
+brew tap johanhaleby/kubetail
+brew install kubetail
 ```
 
 ## [Mozilla SOPs][mozilla-sops]
