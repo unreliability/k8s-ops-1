@@ -56,6 +56,12 @@ brew install jq
 brew install kubectl
 ```
 
+## [Kubetail][kubetail]
+
+``` bash
+brew tap johanhaleby/kubetail && brew install kubetail
+```
+
 ## [Mozilla SOPs][mozilla-sops]
 
 ``` bash
@@ -80,12 +86,6 @@ brew install shellcheck
 brew install go-task/tap/go-task
 ```
 
-## [Velero][velero]
-
-``` bash
-brew install velero
-```
-
 ## [Yamllint][yamllint]
 
 ``` bash
@@ -103,6 +103,7 @@ brew install yamllint
 [helm]: https://helm.sh/
 [jq]: https://stedolan.github.io/jq/
 [kubectl]: https://kubernetes.io/
+[kubetail]: https://github.com/johanhaleby/kubetail
 [mozilla-sops]: https://github.com/mozilla/sops
 [pre-commit]: https://pre-commit.com/
 [shellcheck]: https://www.shellcheck.net/
