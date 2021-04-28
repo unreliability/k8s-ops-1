@@ -6,82 +6,84 @@ Using [HomeBrew][brew] on MacOS install the following packages:
 
 ## [Ansible][ansible]
 
-``` bash
+```bash
 brew install ansible
 ```
 
 ## [Direnv][direnv]
 
-``` bash
+```bash
 brew install direnv
 ```
 
 ## [Docker][docker]
 
-``` bash
+```bash
 brew install --cask docker
 ```
 
 ## [Fluxv2][flux]
 
-``` bash
+```bash
 brew install fluxcd/tap/flux
 ```
 
 ## [Git][git]
-``` bash
+
+```bash
 brew install git
 ```
 
 ## [Go][go]
-``` bash
+
+```bash
 brew install go
 ```
 
 ## [Helm][helm]
 
-``` bash
+```bash
 brew install helm
 ```
 
 ## [jq][jq]
 
-``` bash
+```bash
 brew install jq
 ```
 
 ## [Kubectl][kubectl]
 
-``` bash
+```bash
 brew install kubectl
 ```
 
 ## [Kubetail][kubetail]
 
-``` bash
+```bash
 brew tap johanhaleby/kubetail
 brew install kubetail
 ```
 
 ## [Mozilla SOPs][mozilla-sops]
 
-``` bash
+```bash
 brew install sops
 ```
 
 ## [Pre-commit][pre-commit]
 
-``` bash
+```bash
 brew install pre-commit
 ```
 
 ## [Shellcheck][shellcheck]
 
-``` bash
+```bash
 brew install shellcheck
 ```
 
-## [Task][task]
+## [Go-Task][go-task]
 
 ```bash
 brew install go-task/tap/go-task
@@ -89,17 +91,16 @@ brew install go-task/tap/go-task
 
 ## [Yamllint][yamllint]
 
-``` bash
+```bash
 brew install yamllint
 ```
-
 
 [ansible]: https://www.ansible.com/
 [brew]: https://brew.sh/
 [direnv]: https://direnv.net/
 [docker]: https://www.docker.com/
 [flux]: https://toolkit.fluxcd.io/get-started/
-[git]:  https://git-scm.com/
+[git]: https://git-scm.com/
 [go]: https://golang.org/
 [helm]: https://helm.sh/
 [jq]: https://stedolan.github.io/jq/
@@ -108,6 +109,6 @@ brew install yamllint
 [mozilla-sops]: https://github.com/mozilla/sops
 [pre-commit]: https://pre-commit.com/
 [shellcheck]: https://www.shellcheck.net/
-[task]: https://taskfile.dev/
+[go-task]: https://taskfile.dev/
 [velero]: https://velero.io/
 [yamllint]: https://github.com/adrienverge/yamllint

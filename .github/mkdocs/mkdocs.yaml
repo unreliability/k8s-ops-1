@@ -96,3 +96,17 @@ nav:
   - Get Started:
       - Environment: get-started/environment.md
       - Ansible: get-started/ansible.md
+      - Direnv: get-started/direnv.md
+      - Docker: get-started/docker.md
+      - Flux: get-started/fluxv2.md
+      - Git: get-started/git.md
+      - Go-Task: get-started/go-task.md
+      - Go: get-started/go.md
+      - Helm: get-started/helm.md
+      - jq: get-started/jq.md
+      - Kubectl: get-started/kubectl.md
+      - Kubetail: get-started/kubetail.md
+      - Pre-commit: get-started/pre-commit.md
+      - Shellcheck: get-started/shellcheck.md
+      - SOPS: get-started/sops.md
+      - Yamllint: get-started/yamllint.md
