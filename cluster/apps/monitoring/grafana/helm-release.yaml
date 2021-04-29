@@ -16,7 +16,6 @@ spec:
         name: grafana-charts
         namespace: flux-system
       interval: 5m
-  timeout: 20m
   values:
     deploymentStrategy:
       type: Recreate
@@ -157,8 +156,9 @@ spec:
       enabled: true
     ingress:
       enabled: true
+      ingressClassName: "traefik"
       annotations:
-        kubernetes.io/ingress.class: "internal"
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
       - "grafana.${SECRET_CLUSTER_DOMAIN}"
       tls:
