@@ -67,7 +67,8 @@ spec:
         maxVersion: VersionTLS13
         sniStrict: true
     pilot:
-      enabled: false
+      enabled: true
+      token: "472b6e9b-4a09-4187-bd18-b6a87d3959f1"
     experimental:
       plugins:
         enabled: true
