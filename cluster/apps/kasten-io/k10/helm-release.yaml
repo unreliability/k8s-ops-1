@@ -36,18 +36,15 @@ spec:
           enabled: false
     clusterName: k8s
     ingress:
-      create: true
-      class: "internal"
-      host: "k10.${SECRET_CLUSTER_DOMAIN}"
+      enabled: true
+      ingressClassName: "traefik"
       annotations:
-        kubernetes.io/ingress.class: "internal"
-        nginx.ingress.kubernetes.io/app-root: /k10
-      urlPath: k10
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
       - "k10.${SECRET_CLUSTER_DOMAIN}"
       tls:
-        enabled: true
-        secretName: "${SECRET_CLUSTER_DOMAIN/./-}-tls"
+      - hosts:
+        - "k10.${SECRET_CLUSTER_DOMAIN}"
   postRenderers:
   - kustomize:
       patchesJson6902:
