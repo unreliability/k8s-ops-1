@@ -1,0 +1,45 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: externaldns-external
+  namespace: networking
+spec:
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://charts.bitnami.com/bitnami
+      chart: external-dns
+      version: 4.11.1
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami-charts
+        namespace: flux-system
+      interval: 5m
+  values:
+    nameOverride: externaldns-external
+    # interval: "5m"
+    logLevel: debug
+    sources:
+    - ingress
+    provider: cloudflare
+    cloudflare:
+      secretName: external-dns-external
+      email: "${SECRET_CLOUDFLARE_ACCOUNT_EMAIL}"
+      proxied: true
+    policy: sync
+    txtPrefix: "k8s."
+    domainFilters:
+    - "${SECRET_CLUSTER_DOMAIN}"
+    crd:
+      create: false
+    annotationFilter: "external-dns.alpha.kubernetes.io/external in (true)"
+    serviceAccount:
+      name: externaldns
+      create: false
+    resources:
+      requests:
+        memory: 100Mi
+        cpu: 25m
+      limits:
+        memory: 250Mi
