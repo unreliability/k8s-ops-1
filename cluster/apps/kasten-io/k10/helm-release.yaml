@@ -17,7 +17,6 @@ spec:
         name: kasten-charts
         namespace: flux-system
       interval: 5m
-  timeout: 20m
   values:
     eula:
       accept: true
@@ -36,15 +35,16 @@ spec:
           enabled: false
     clusterName: k8s
     ingress:
-      enabled: true
-      ingressClassName: "traefik"
+      create: true
+      host: "k10.${SECRET_CLUSTER_DOMAIN}"
       annotations:
         traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+      urlPath: k10
       hosts:
       - "k10.${SECRET_CLUSTER_DOMAIN}"
       tls:
-      - hosts:
-        - "k10.${SECRET_CLUSTER_DOMAIN}"
+        enabled: true
+        secretName: "${SECRET_CLUSTER_DOMAIN/./-}-tls"
   postRenderers:
   - kustomize:
       patchesJson6902:
@@ -52,6 +52,6 @@ spec:
           kind: Ingress
           name: k10-ingress
         patch:
-        - op: replace
-          path: /spec/rules/0/http/paths/0/path
-          value: /
+        - op: add
+          path: /spec/ingressClassName
+          value: traefik
