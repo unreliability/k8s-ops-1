@@ -153,3 +153,4 @@ spec:
       - ReadWriteOnce
     podAnnotations:
       configmap.reloader.stakater.com/reload: "grafana"
+      cni.projectcalico.org/ipv4pools: "public-ips"
