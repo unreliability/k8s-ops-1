@@ -147,7 +147,7 @@ spec:
         - "grafana.${SECRET_CLUSTER_DOMAIN}"
     persistence:
       enabled: true
-      storageClassName: "ceph-rbd-sc"
+      storageClassName: "rook-ceph-block"
       size: 10Gi
       accessModes:
       - ReadWriteOnce
