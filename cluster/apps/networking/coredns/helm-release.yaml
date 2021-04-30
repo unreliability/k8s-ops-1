@@ -21,7 +21,7 @@ spec:
     fullnameOverride: coredns
     rbac:
       create: true
-    replicaCount: 3
+    replicaCount: 1
     isClusterService: false
     serviceType: LoadBalancer
     service:
@@ -30,30 +30,53 @@ spec:
       externalTrafficPolicy: Local
     servers:
     - zones:
-      - zone: ${SECRET_CLUSTER_DOMAIN}.
-        scheme: dns://
-      - zone: gateway.${SECRET_CLUSTER_DOMAIN}
+      - zone: ${SECRET_CLUSTER_DOMAIN}
         scheme: dns://
       port: 53
       plugins:
+      # Enables console logging
       - name: log
       - name: errors
+      # Serves a /health endpoint on :8080, required for livenessProbe
       - name: health
         configBlock: |-
           lameduck 5s
+      # Serves a /ready endpoint on :8181, required for readinessProbe
       - name: ready
-      - name: cache
-        parameters: 30
-      - name: loop
+      # Allow automatic reloading of Corefile
       - name: reload
-      - name: loadbalance
+      # Detect forwarding loops
+      - name: loop
+      # Static hosts
+      - name: hosts
+        configBlock: |-
+          fallthrough
+      # Set up local resolution
       - name: etcd
-        parameters: ${SECRET_CLUSTER_DOMAIN}
         configBlock: |-
           stubzones
           path /skydns
           endpoint https://10.1.6.201:2379 https://10.1.6.202:2379 https://10.1.6.203:2379
           tls /etc/coredns/coredns-etcd/cert.pem /etc/coredns/coredns-etcd/key.pem /etc/coredns/coredns-etcd/ca.crt
+      # Set up cache
+      - name: cache
+        parameters: 30
     extraSecrets:
     - name: coredns-etcd
       mountPath: /etc/coredns/coredns-etcd
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+              - coredns
+          topologyKey: "kubernetes.io/hostname"
+    resources:
+      requests:
+        memory: 200Mi
+        cpu: 50m
+      limits:
+        memory: 500Mi
