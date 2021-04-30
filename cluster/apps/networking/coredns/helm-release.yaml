@@ -32,20 +32,16 @@ spec:
     - zones:
       - zone: ${SECRET_CLUSTER_DOMAIN}.
         scheme: dns://
+      - zone: gateway.${SECRET_CLUSTER_DOMAIN}
+        scheme: dns://
       port: 53
       plugins:
-      - name: debug
       - name: log
-      - name: transfer
-        configBlock: |-
-          to *
-      # - name: errors
+      - name: errors
       - name: health
         configBlock: |-
           lameduck 5s
       - name: ready
-      - name: forward
-        parameters: . /etc/resolv.conf
       - name: cache
         parameters: 30
       - name: loop

@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: externaldns-internal
+  name: external-dns
   namespace: networking
 spec:
   interval: 5m
@@ -17,27 +17,26 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    nameOverride: externaldns-internal
+    nameOverride: external-dns
     # interval: "5m"
     logLevel: debug
     sources:
-    - crd
-    - service
     - ingress
-    provider: coredns
-    coredns:
-      etcdEndpoints: "https://10.1.6.201:2379,https://10.1.6.202:2379,https://10.1.6.203:2379"
-      etcdTLS:
-        enabled: true
-        secretName: coredns-etcd
+    provider: cloudflare
+    cloudflare:
+      secretName: cloudflare-api-key
+      email: "${SECRET_EMAIL}"
+      proxied: true
     policy: sync
-    # txtPrefix: "k8s."
+    txtPrefix: "k8s."
     domainFilters:
     - "${SECRET_CLUSTER_DOMAIN}"
     crd:
-      create: true
+      create: false
+    annotationFilter: "external-dns/public in (true)"
     serviceAccount:
-      name: externaldns
+      name: internal-dns
+      create: false
     resources:
       requests:
         memory: 100Mi
