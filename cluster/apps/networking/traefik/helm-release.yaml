@@ -74,7 +74,7 @@ spec:
         sniStrict: true
     pilot:
       enabled: true
-      token: "472b6e9b-4a09-4187-bd18-b6a87d3959f1"
+      token: "${SECRET_TRAEFIK_PILOT_TOKEN}"
     experimental:
       plugins:
         enabled: true
