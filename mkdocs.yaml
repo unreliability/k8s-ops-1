@@ -40,7 +40,7 @@ theme:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
     - search.suggest
 
-docs_dir: ../../docs/
+docs_dir: docs/
 
 extra:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#versioning
