@@ -1,3 +1,2 @@
-export KUBECONFIG=$(git rev-parse --show-toplevel)/kubeconfig
+export KUBECONFIG=$(expand_path ./kubeconfig)
 export ANSIBLE_CONFIG=$(expand_path ./server/ansible/ansible.cfg)
-export GITHUB_TOKEN=59d0034c-36fe-4fdd-98f9-ffe6a5d50244
