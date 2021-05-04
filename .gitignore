@@ -14,3 +14,5 @@ server/ansible/roles/geerlingguy.pip*
 ansible.log
 # SOPS
 .decrypted~*.yaml
+.vault-password
+kubeconfig
