@@ -4,6 +4,7 @@ ignore: |
   integrations/
   ignore/
   *-crds.yaml
+  ubuntu-autoinstall/
 extends: default
 rules:
   truthy:
